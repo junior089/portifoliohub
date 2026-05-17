@@ -86,7 +86,7 @@ A tag `v1.0` representa a primeira versão estável da entrega intermediária, c
 - GitHub Pages: `https://junior089.github.io/portfoliohub-entrega-intermediaria/`
 - LinkedIn: `https://www.linkedin.com/in/carlos-alberto-soares-de-oliveira-j%C3%BAnior-48127b220/`
 - Apresentação: `slides/apresentacao.html`
-- Vídeo no YouTube: `[LINK_DO_VIDEO_YOUTUBE]`
+- Vídeo no YouTube: `https://youtu.be/U9jnTajrpV4`
 
 ## Projetos pessoais relacionados
 

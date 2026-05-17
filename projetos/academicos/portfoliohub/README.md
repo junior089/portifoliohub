@@ -27,7 +27,7 @@ Versão inicial concluída para entrega intermediária.
 
 ## Próximos passos
 
-- Substituir os placeholders restantes pelos links reais do repositório publicado, GitHub Pages e vídeo no YouTube.
+- Manter os links públicos atualizados conforme a evolução do repositório, GitHub Pages e vídeo no YouTube.
 - Adicionar prints da publicação e do histórico de commits ao relatório final.
 - Usar o repositório como base para novos projetos acadêmicos e profissionais.
 
@@ -36,5 +36,6 @@ Versão inicial concluída para entrega intermediária.
 - Página principal: `../../../index.html`
 - Relatório final: `../../../documentos/relatorio-final.html`
 - Apresentação: `../../../slides/apresentacao.html`
+- Vídeo no YouTube: `https://youtu.be/U9jnTajrpV4`
 - Perfil GitHub: `https://github.com/junior089`
 - LinkedIn: `https://www.linkedin.com/in/carlos-alberto-soares-de-oliveira-j%C3%BAnior-48127b220/`
