@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apresentação | PortfolioHUB</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --surface: #161d27;
+      --line: #2c3645;
+      --text: #eef4f8;
+      --muted: #a9b6c4;
+      --accent: #4fd1c5;
+      --gold: #f4c95d;
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #0d1117 0%, #111923 100%);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    header,
+    main,
+    footer {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    header {
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .deck {
+      display: grid;
+      gap: 24px;
+      padding-top: 32px;
+    }
+
+    .slide {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      min-height: 520px;
+      padding: clamp(24px, 5vw, 56px);
+      display: grid;
+      align-content: center;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.25);
+    }
+
+    .slide-number {
+      color: var(--gold);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 10vw, 7rem);
+      line-height: 0.95;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 6vw, 4rem);
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 1.25rem;
+      max-width: 760px;
+    }
+
+    .points {
+      display: grid;
+      gap: 14px;
+      list-style: none;
+      margin: 24px 0 0;
+      padding: 0;
+    }
+
+    .points li {
+      border-left: 4px solid var(--accent);
+      color: var(--muted);
+      padding-left: 14px;
+    }
+
+    .script {
+      background: rgba(79, 209, 197, 0.08);
+      border: 1px solid rgba(79, 209, 197, 0.28);
+      border-radius: var(--radius);
+      color: var(--text);
+      margin-top: 28px;
+      padding: 16px;
+    }
+
+    .script strong {
+      color: var(--accent);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    code {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 6px;
+      padding: 2px 5px;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+
+      header,
+      footer {
+        display: none;
+      }
+
+      main {
+        max-width: none;
+        padding: 0;
+      }
+
+      .slide {
+        break-after: page;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        min-height: 100vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <strong>PortfolioHUB</strong>
+    <a href="../index.html">Voltar para a página principal</a>
+  </header>
+
+  <main class="deck">
+    <section class="slide">
+      <span class="slide-number">Slide 01</span>
+      <h1>PortfolioHUB</h1>
+      <p class="lead">Repositório acadêmico e profissional com projetos documentados, versionamento Git/GitHub e publicação via GitHub Pages.</p>
+      <div class="script"><strong>Roteiro de fala</strong>Apresentar o nome do projeto, o contexto da entrega intermediária e a proposta de criar um hub público para organizar projetos, documentação e evolução profissional.</div>
+    </section>
+
+    <section class="slide">
+      <span class="slide-number">Slide 02</span>
+      <h2>Objetivo do repositório</h2>
+      <ul class="points">
+        <li>Reunir projetos acadêmicos e pessoais em uma estrutura única.</li>
+        <li>Demonstrar boas práticas de documentação e versionamento.</li>
+        <li>Preparar uma página pública para avaliação e portfólio.</li>
+      </ul>
+      <div class="script"><strong>Roteiro de fala</strong>Explicar que o repositório não é apenas uma pasta de arquivos, mas uma apresentação organizada do aprendizado, com histórico e documentação acessíveis.</div>
+    </section>
+
+    <section class="slide">
+      <span class="slide-number">Slide 03</span>
+      <h2>Estrutura de pastas</h2>
+      <ul class="points">
+        <li><code>assets/</code> concentra CSS, JavaScript e imagens.</li>
+        <li><code>documentos/</code> contém o relatório final em HTML.</li>
+        <li><code>slides/</code> contém esta apresentação.</li>
+        <li><code>projetos/</code> organiza projetos acadêmicos e pessoais.</li>
+      </ul>
+      <div class="script"><strong>Roteiro de fala</strong>Destacar que a estrutura facilita navegação, avaliação e manutenção futura, mantendo no repositório apenas materiais públicos e finais.</div>
+    </section>
+
+    <section class="slide">
+      <span class="slide-number">Slide 04</span>
+      <h2>Projeto acadêmico principal</h2>
+      <p class="lead">O PortfolioHUB é o projeto central da entrega intermediária, construído com HTML, CSS e JavaScript puro.</p>
+      <ul class="points">
+        <li>Página inicial responsiva.</li>
+        <li>Documentação em README.</li>
+        <li>Relatório final preparado para PDF.</li>
+      </ul>
+      <div class="script"><strong>Roteiro de fala</strong>Comentar que a escolha por tecnologias simples garante funcionamento direto no GitHub Pages e facilita a avaliação do conteúdo.</div>
+    </section>
+
+    <section class="slide">
+      <span class="slide-number">Slide 05</span>
+      <h2>Projetos pessoais documentados</h2>
+      <ul class="points">
+        <li>API de Monitoramento Judicial.</li>
+        <li>MayDerma Shopify Theme.</li>
+        <li>Entradas preparadas para expansão e ligação com repositórios específicos.</li>
+      </ul>
+      <div class="script"><strong>Roteiro de fala</strong>Explicar que os projetos pessoais entram como itens de portfólio, permitindo evolução futura com links, imagens, detalhes técnicos e demonstrações.</div>
+    </section>
+
+    <section class="slide">
+      <span class="slide-number">Slide 06</span>
+      <h2>Versionamento com Git</h2>
+      <ul class="points">
+        <li>Branch principal: <code>main</code>.</li>
+        <li>Commits organizados por etapa da entrega.</li>
+        <li>Tag <code>v1.0</code> para marcar a primeira versão estável.</li>
+      </ul>
+      <div class="script"><strong>Roteiro de fala</strong>Mostrar que o histórico permite acompanhar a evolução do projeto, desde a estrutura inicial até a documentação e publicação.</div>
+    </section>
+
+    <section class="slide">
+      <span class="slide-number">Slide 07</span>
+      <h2>GitHub Pages</h2>
+      <p class="lead">A publicação foi planejada para usar a branch <code>main</code> e a pasta raiz <code>/</code>, sem build.</p>
+      <div class="script"><strong>Roteiro de fala</strong>Explicar que a página pública facilita o acesso do professor, de colegas e de contatos profissionais ao conteúdo do projeto.</div>
+    </section>
+
+    <section class="slide">
+      <span class="slide-number">Slide 08</span>
+      <h2>Integração com LinkedIn</h2>
+      <ul class="points">
+        <li>Adicionar o repositório à seção de Projetos.</li>
+        <li>Usar o link do GitHub Pages nos Destaques.</li>
+        <li>Apresentar o projeto como evidência prática de organização e versionamento.</li>
+      </ul>
+      <div class="script"><strong>Roteiro de fala</strong>Comentar que a entrega acadêmica também pode fortalecer a presença profissional, conectando GitHub, página publicada e LinkedIn.</div>
+    </section>
+
+    <section class="slide">
+      <span class="slide-number">Slide 09</span>
+      <h2>Conclusão</h2>
+      <p class="lead">O PortfolioHUB entrega uma base pública, organizada e versionada para apresentar projetos acadêmicos e pessoais com clareza.</p>
+      <ul class="points">
+        <li>Estrutura pronta para avaliação.</li>
+        <li>Documentação preparada para expansão.</li>
+        <li>Publicação planejada para GitHub Pages.</li>
+      </ul>
+      <div class="script"><strong>Roteiro de fala</strong>Encerrar reforçando que o projeto atende aos requisitos da entrega intermediária e cria uma base para evolução contínua do portfólio.</div>
+    </section>
+  </main>
+
+  <footer>
+    Carlos Alberto Junior - Projeto acadêmico desenvolvido com Git, GitHub e GitHub Pages.
+  </footer>
+</body>
+</html>
