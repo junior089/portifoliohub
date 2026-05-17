@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatório Final | PortfolioHUB</title>
+  <style>
+    :root {
+      --ink: #18202b;
+      --muted: #5c6877;
+      --line: #d8dee8;
+      --accent: #0f766e;
+      --bg: #f5f7fb;
+      --paper: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+
+    main {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 32px 18px;
+    }
+
+    .page {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      margin-bottom: 18px;
+      padding: 42px;
+      box-shadow: 0 16px 40px rgba(24, 32, 43, 0.08);
+    }
+
+    .cover {
+      min-height: 780px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      border-bottom: 2px solid var(--accent);
+      font-size: 1.45rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.45rem;
+    }
+
+    h3 {
+      color: var(--accent);
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .muted,
+    li {
+      color: var(--muted);
+    }
+
+    .summary {
+      display: grid;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+    }
+
+    .summary li,
+    .field,
+    .print-box {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px 14px;
+    }
+
+    .field {
+      margin: 10px 0;
+    }
+
+    .field strong {
+      display: block;
+    }
+
+    .print-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .print-box {
+      align-items: center;
+      color: var(--muted);
+      display: flex;
+      min-height: 120px;
+      justify-content: center;
+      text-align: center;
+    }
+
+    code,
+    pre {
+      background: #eef3f7;
+      border-radius: 6px;
+    }
+
+    code {
+      padding: 2px 5px;
+    }
+
+    pre {
+      overflow: auto;
+      padding: 14px;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+
+      main {
+        max-width: none;
+        padding: 0;
+      }
+
+      .page {
+        border: 0;
+        box-shadow: none;
+        break-after: page;
+        margin: 0;
+        min-height: 100vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="page cover">
+      <p class="muted">Desafio - Entrega Intermediária: Criação de Repositório com Versionamento</p>
+      <h1>Projeto: PortfolioHUB</h1>
+      <p><strong>Estudante:</strong> Carlos Alberto Junior</p>
+      <p><strong>Data:</strong> 17 de maio de 2026</p>
+    </section>
+
+    <section class="page">
+      <h2>Sumário</h2>
+      <ol class="summary">
+        <li>Objetivo do trabalho</li>
+        <li>Planejamento do repositório</li>
+        <li>Estrutura de diretórios</li>
+        <li>Criação e versionamento do projeto inicial</li>
+        <li>Organização e documentação</li>
+        <li>Publicação com GitHub Pages</li>
+        <li>Integração com LinkedIn</li>
+        <li>Apresentação final</li>
+        <li>Conclusão</li>
+      </ol>
+    </section>
+
+    <section class="page">
+      <h2>Objetivo do trabalho</h2>
+      <p>O objetivo do PortfolioHUB é criar um repositório público, versionado e documentado para apresentar projetos acadêmicos e pessoais. A entrega demonstra domínio de organização de arquivos, documentação em README, uso de Git/GitHub, criação de tag de versão e preparação para publicação via GitHub Pages.</p>
+
+      <h2>Planejamento do repositório</h2>
+      <p>O repositório foi planejado para conter apenas arquivos finais e públicos. A página principal apresenta o portfólio, a pasta de documentos concentra o relatório final em HTML, a pasta de slides reúne o material de apresentação e a pasta de projetos organiza as entradas acadêmicas e pessoais.</p>
+
+      <h2>Estrutura de diretórios</h2>
+      <pre><code>portfoliohub-entrega-intermediaria/
+├── index.html
+├── README.md
+├── LICENSE
+├── assets/
+├── documentos/
+├── slides/
+└── projetos/</code></pre>
+    </section>
+
+    <section class="page">
+      <h2>Criação e versionamento do projeto inicial</h2>
+      <p>O projeto foi criado em uma pasta própria e inicializado com Git. A branch principal foi definida como <code>main</code>, e o histórico foi dividido em commits incrementais para registrar as principais etapas da entrega.</p>
+      <p>A tag <code>v1.0</code> identifica a primeira versão estável do PortfolioHUB.</p>
+
+      <h2>Organização e documentação</h2>
+      <p>A documentação foi distribuída em READMEs públicos e objetivos. O README principal descreve a proposta, tecnologias, estrutura, publicação e links. Os READMEs das pastas de projetos apresentam objetivo, status e próximos passos de cada item documentado.</p>
+    </section>
+
+    <section class="page">
+      <h2>Publicação com GitHub Pages</h2>
+      <p>O site foi preparado para ser publicado pelo GitHub Pages usando a branch <code>main</code> e a pasta raiz <code>/</code>. Como o projeto usa HTML, CSS e JavaScript puro, não há etapa de build.</p>
+
+      <h2>Integração com LinkedIn</h2>
+      <p>Após a publicação, o repositório pode ser adicionado ao LinkedIn na seção de Projetos ou Destaques, reforçando a presença profissional e facilitando o acesso aos materiais da entrega.</p>
+
+      <h2>Apresentação final</h2>
+      <p>A apresentação em HTML foi preparada para guiar um vídeo de aproximadamente cinco minutos, abordando objetivo, estrutura, projetos, versionamento, publicação e integração profissional.</p>
+    </section>
+
+    <section class="page">
+      <h2>Links da entrega</h2>
+      <div class="field"><strong>Link do GitHub</strong>[LINK_DO_REPOSITORIO_GITHUB]</div>
+      <div class="field"><strong>Link do GitHub Pages</strong>[LINK_DO_GITHUB_PAGES]</div>
+      <div class="field"><strong>Link do LinkedIn</strong>[LINK_DO_LINKEDIN]</div>
+      <div class="field"><strong>Link do vídeo no YouTube</strong>[LINK_DO_VIDEO_YOUTUBE]</div>
+
+      <h2>Campos para prints</h2>
+      <div class="print-grid">
+        <div class="print-box">Print do repositório no GitHub</div>
+        <div class="print-box">Print dos commits</div>
+        <div class="print-box">Print da tag v1.0</div>
+        <div class="print-box">Print do GitHub Pages</div>
+        <div class="print-box">Print da integração com LinkedIn</div>
+      </div>
+    </section>
+
+    <section class="page">
+      <h2>Conclusão</h2>
+      <p>O PortfolioHUB consolida a entrega intermediária em um repositório organizado, documentado e preparado para publicação. A estrutura criada favorece a avaliação acadêmica e também serve como base para expansão do portfólio profissional do estudante.</p>
+    </section>
+  </main>
+</body>
+</html>
