@@ -12,8 +12,8 @@ As tecnologias variam conforme o projeto, incluindo desenvolvimento web, APIs, i
 
 ## Organização
 
-- `api-monitoramento-judicial/`: documentação da API de Monitoramento Judicial.
-- `mayderma-shopify/`: documentação do projeto MayDerma Shopify Theme.
+- `asclepio/`: documentação do projeto Asclépio.
+- `amet/`: documentação do projeto AMET.
 - `plantao/`: documentação do projeto Plantão.
 
 ## Status

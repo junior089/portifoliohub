@@ -43,9 +43,9 @@ portfoliohub-entrega-intermediaria/
     │       └── README.md
     └── pessoais/
         ├── README.md
-        ├── api-monitoramento-judicial/
+        ├── asclepio/
         │   └── README.md
-        ├── mayderma-shopify/
+        ├── amet/
         │   └── README.md
         └── plantao/
             └── README.md
@@ -90,9 +90,9 @@ A tag `v1.0` representa a primeira versão estável da entrega intermediária, c
 
 ## Projetos pessoais relacionados
 
-- AMET: `https://github.com/junior089/amet`
-- Asclépio: `https://github.com/junior089/asclepio/`
-- Plantão: `https://github.com/junior089/Plantao`
+- Asclépio: aplicativo de saúde para acompanhamento de hidratação, peso, exercícios, sintomas e alertas regionais. Repositório: `https://github.com/junior089/asclepio/`
+- AMET: aplicativo para assistir filmes e vídeos sincronizados em salas compartilhadas. Repositório: `https://github.com/junior089/amet`
+- Plantão: aplicativo para funcionários da remoção do Hospital de Planaltina acompanharem suas escalas. Repositório: `https://github.com/junior089/Plantao`
 
 ## Licença
 

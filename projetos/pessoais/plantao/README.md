@@ -6,12 +6,13 @@ Projeto pessoal.
 
 ## Objetivo
 
-Documentar uma solução relacionada à organização de plantões, rotina operacional e controle de informações, compondo o portfólio profissional com foco em problemas práticos.
+Documentar um aplicativo para funcionários da remoção do Hospital de Planaltina acompanharem suas escalas e informações de plantão, compondo o portfólio profissional com foco em problemas práticos.
 
 ## Tecnologias
 
-- Desenvolvimento web
-- JavaScript
+- Escalas de plantão
+- Rotina hospitalar
+- Organização de informações
 - Git e GitHub
 
 ## Organização
@@ -26,7 +27,7 @@ Documentado como projeto pessoal de portfólio.
 
 - Expandir a descrição técnica do projeto.
 - Incluir capturas de tela e exemplos de uso.
-- Registrar principais funcionalidades e decisões de implementação.
+- Registrar as principais funcionalidades relacionadas à consulta de escalas.
 
 ## Links relacionados
 
