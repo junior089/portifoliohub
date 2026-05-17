@@ -248,6 +248,15 @@ h4 {
   padding: 1.25rem;
 }
 
+.inline-link {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.inline-link:hover {
+  color: var(--green);
+}
+
 .tag {
   align-self: flex-start;
   background: rgba(244, 201, 93, 0.12);

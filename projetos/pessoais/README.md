@@ -14,6 +14,7 @@ As tecnologias variam conforme o projeto, incluindo desenvolvimento web, APIs, i
 
 - `api-monitoramento-judicial/`: documentação da API de Monitoramento Judicial.
 - `mayderma-shopify/`: documentação do projeto MayDerma Shopify Theme.
+- `plantao/`: documentação do projeto Plantão.
 
 ## Status
 
@@ -21,11 +22,15 @@ Projetos documentados como entradas de portfólio para a versão `v1.0` do Portf
 
 ## Próximos passos
 
-- Associar cada projeto ao respectivo repositório público, quando disponível.
+- Manter cada projeto associado ao respectivo repositório público.
 - Expandir documentação técnica e imagens de resultado.
 - Atualizar status conforme novas entregas forem concluídas.
 
 ## Links relacionados
 
 - Página principal: `../../index.html`
-- LinkedIn: `[LINK_DO_LINKEDIN]`
+- Perfil GitHub: `https://github.com/junior089`
+- LinkedIn: `https://www.linkedin.com/in/carlos-alberto-soares-de-oliveira-j%C3%BAnior-48127b220/`
+- AMET: `https://github.com/junior089/amet`
+- Asclépio: `https://github.com/junior089/asclepio/`
+- Plantão: `https://github.com/junior089/Plantao`

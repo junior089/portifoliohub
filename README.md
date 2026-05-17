@@ -45,7 +45,9 @@ portfoliohub-entrega-intermediaria/
         ├── README.md
         ├── api-monitoramento-judicial/
         │   └── README.md
-        └── mayderma-shopify/
+        ├── mayderma-shopify/
+        │   └── README.md
+        └── plantao/
             └── README.md
 ```
 
@@ -80,10 +82,17 @@ A tag `v1.0` representa a primeira versão estável da entrega intermediária, c
 ## Links
 
 - Repositório GitHub: `[LINK_DO_REPOSITORIO_GITHUB]`
+- Perfil GitHub: `https://github.com/junior089`
 - GitHub Pages: `[LINK_DO_GITHUB_PAGES]`
-- LinkedIn: `[LINK_DO_LINKEDIN]`
+- LinkedIn: `https://www.linkedin.com/in/carlos-alberto-soares-de-oliveira-j%C3%BAnior-48127b220/`
 - Apresentação: `slides/apresentacao.html`
 - Vídeo no YouTube: `[LINK_DO_VIDEO_YOUTUBE]`
+
+## Projetos pessoais relacionados
+
+- AMET: `https://github.com/junior089/amet`
+- Asclépio: `https://github.com/junior089/asclepio/`
+- Plantão: `https://github.com/junior089/Plantao`
 
 ## Licença
 

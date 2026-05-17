@@ -6,7 +6,7 @@ Projeto pessoal.
 
 ## Objetivo
 
-Documentar uma solução de API voltada ao acompanhamento de informações judiciais, com foco em organização de dados, integração e consulta estruturada.
+Documentar uma solução de API voltada ao acompanhamento de informações judiciais, com foco em organização de dados, integração e consulta estruturada. O projeto está relacionado ao repositório Asclépio.
 
 ## Tecnologias
 
@@ -26,11 +26,12 @@ Documentado como projeto pessoal de portfólio.
 
 ## Próximos passos
 
-- Adicionar link do repositório específico, quando publicado.
 - Incluir arquitetura da API e exemplos de endpoints.
 - Registrar prints ou exemplos de uso.
+- Expandir a documentação técnica conforme novas funcionalidades forem estabilizadas.
 
 ## Links relacionados
 
-- Repositório específico: `[LINK_DO_REPOSITORIO_DO_PROJETO]`
-- LinkedIn: `[LINK_DO_LINKEDIN]`
+- Repositório Asclépio: `https://github.com/junior089/asclepio/`
+- Perfil GitHub: `https://github.com/junior089`
+- LinkedIn: `https://www.linkedin.com/in/carlos-alberto-soares-de-oliveira-j%C3%BAnior-48127b220/`
