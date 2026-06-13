@@ -18,8 +18,8 @@ Implantar uma plataforma de portfólio digital com:
 O projeto é 100% estático. Basta abrir o arquivo `index.html` no navegador.
 
 ```bash
-gh repo clone junior089/portfoliohub-entrega-intermediaria
-cd portfoliohub-entrega-intermediaria
+gh repo clone junior089/portfoliohub
+cd portfoliohub
 start index.html
 ```
 
@@ -34,7 +34,7 @@ xdg-open index.html
 ## Estrutura
 
 ```text
-portfoliohub-entrega-intermediaria/
+portfoliohub/
 ├── index.html
 ├── README.md
 ├── SECURITY.md
@@ -96,8 +96,8 @@ portfoliohub-entrega-intermediaria/
 
 ## Links
 
-- Repositório: `https://github.com/junior089/portfoliohub-entrega-intermediaria`
-- GitHub Pages: `https://junior089.github.io/portfoliohub-entrega-intermediaria/`
+- Repositório: `https://github.com/junior089/portfoliohub`
+- GitHub Pages: `https://junior089.github.io/portfoliohub/`
 - Vídeo final no YouTube: substituir pelo link final publicado.
 
 ## Autor
