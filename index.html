@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://api.github.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://api.github.com;">
   <title>PortfolioHUB | Carlos Alberto Junior</title>
-  <meta name="description" content="PortfolioHUB: repositório acadêmico e profissional com projetos, documentação, versionamento Git/GitHub e publicação via GitHub Pages.">
+  <meta name="description" content="PortfolioHUB: repositório acadêmico e profissional com projetos, documentação, versionamento Git/GitHub, segurança IAM e publicação via GitHub Pages.">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -23,6 +24,8 @@
       <a href="#inicio">Início</a>
       <a href="#sobre">Sobre</a>
       <a href="#projetos">Projetos</a>
+      <a href="#seguranca">Segurança & IAM</a>
+      <a href="#gemini-assistant">Assistente Gemini</a>
       <a href="#documentacao">Documentação</a>
       <a href="#versionamento">Versionamento</a>
       <a href="#github-pages">GitHub Pages</a>
@@ -33,16 +36,16 @@
   <main>
     <section class="hero section" id="inicio">
       <div class="hero-content reveal">
-        <p class="eyebrow">Entrega intermediária • GitHub Pages • Portfolio público</p>
+        <p class="eyebrow">Entrega Final • Implantação PortfolioHUB + IA GEMINI • GitHub Pages</p>
         <h1>PortfolioHUB</h1>
-        <p class="hero-text">Um repositório acadêmico e profissional para apresentar projetos, documentação, versionamento e materiais de entrega com uma página pública limpa, responsiva e pronta para avaliação.</p>
+        <p class="hero-text">Um repositório acadêmico e profissional integrado com a API do GitHub, protegido por políticas robustas de segurança recomendadas por IA e guiado pelo Google Gemini.</p>
         <div class="actions">
           <a class="btn btn-primary" href="https://github.com/junior089/portfoliohub-entrega-intermediaria">Ver repositório</a>
           <a class="btn btn-secondary" href="#documentacao">Ver documentação</a>
           <a class="btn btn-ghost" href="slides/apresentacao.html">Ver apresentação</a>
         </div>
         <div class="hero-meta" aria-label="Resumo rápido da entrega">
-          <span><strong>v1.0</strong> versão marcada</span>
+          <span><strong>v2.0</strong> versão final</span>
           <span><strong>100%</strong> estático</span>
           <span><strong>2026</strong> entrega acadêmica</span>
         </div>
@@ -51,14 +54,46 @@
       <aside class="hero-panel reveal" aria-label="Painel de status do projeto">
         <div class="panel-header">
           <span class="status-dot"></span>
-          <strong>Status da entrega</strong>
+          <strong>Status da implantação</strong>
         </div>
         <ul class="status-list">
-          <li><span></span>Repositório publicado</li>
-          <li><span></span>GitHub Pages ativo</li>
-          <li><span></span>Tag v1.0 criada</li>
-          <li><span></span>Relatório em PDF gerado</li>
+          <li><span></span>Repositório público configurado</li>
+          <li><span></span>Integração com API do GitHub ativa</li>
+          <li><span></span>Políticas de Segurança aplicadas</li>
+          <li><span></span>Assistente Gemini operacional</li>
+          <li><span></span>GitHub Pages publicado</li>
         </ul>
+        
+        <!-- GitHub Stats Live Card -->
+        <div class="github-stats-card" style="margin-top: 1.5rem; border-top: 1px solid var(--line); padding-top: 1.2rem; border-radius: 0; box-shadow: none; background: transparent; border-left: 0; border-right: 0; border-bottom: 0;">
+          <div class="github-stats-header">
+            <span class="github-stats-title">
+              <svg style="width: 18px; height: 18px; fill: currentColor; vertical-align: middle;" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+              GitHub Live Stats
+            </span>
+            <span class="status-dot" style="background: var(--accent); box-shadow: 0 0 8px var(--accent);"></span>
+          </div>
+          <div class="github-stats-grid" style="margin-top: 0.8rem;">
+            <div class="github-stat-item">
+              <span class="github-stat-val" id="github-stars">0</span>
+              <span class="github-stat-lbl">Stars</span>
+            </div>
+            <div class="github-stat-item">
+              <span class="github-stat-val" id="github-forks">0</span>
+              <span class="github-stat-lbl">Forks</span>
+            </div>
+            <div class="github-stat-item">
+              <span class="github-stat-val" id="github-issues">0</span>
+              <span class="github-stat-lbl">Issues</span>
+            </div>
+            <div class="github-stat-item">
+              <span class="github-stat-val" id="github-commits">0</span>
+              <span class="github-stat-lbl">Commits (v2.0)</span>
+            </div>
+          </div>
+          <span class="github-sync-status" id="github-sync-date" style="margin-top: 0.8rem; display: block;">Sincronizando...</span>
+        </div>
+
         <a class="panel-link" href="https://junior089.github.io/portfoliohub-entrega-intermediaria/">Abrir site publicado</a>
       </aside>
     </section>
@@ -69,16 +104,16 @@
         <span>projetos documentados</span>
       </article>
       <article class="metric reveal">
-        <strong data-count="7">0</strong>
+        <strong data-count="10">0</strong>
         <span>READMEs públicos</span>
       </article>
       <article class="metric reveal">
-        <strong data-count="6">0</strong>
+        <strong data-count="12">0</strong>
         <span>commits principais</span>
       </article>
       <article class="metric reveal">
-        <strong data-count="1">0</strong>
-        <span>tag de versão</span>
+        <strong data-count="2">0</strong>
+        <span>tags de versão (v1.0/v2.0)</span>
       </article>
     </section>
 
@@ -187,6 +222,106 @@
       </div>
     </section>
 
+    <!-- SECTION: SEGURANÇA & IAM -->
+    <section class="section" id="seguranca">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Segurança & IAM</p>
+        <h2>Políticas de Segurança e Controle de Acesso</h2>
+        <p>Políticas e regras de colaboração recomendadas por IA e auditadas para garantir a integridade do código e a segurança do deploy.</p>
+      </div>
+
+      <div class="security-grid reveal">
+        <article class="security-card">
+          <div class="security-badge">Controle de Acesso</div>
+          <h3>Gestão IAM</h3>
+          <p>Organização de permissões de usuários no GitHub divididas em papéis estratégicos para garantir o princípio do menor privilégio.</p>
+          <ul class="security-bullet-list">
+            <li><strong>Owner:</strong> Acesso total às configurações e faturamento.</li>
+            <li><strong>Collaborator:</strong> Permissão de escrita via Pull Requests.</li>
+            <li><strong>Reader:</strong> Acesso de leitura para auditoria acadêmica.</li>
+          </ul>
+        </article>
+
+        <article class="security-card">
+          <div class="security-badge">Versionamento</div>
+          <h3>Branch Protection</h3>
+          <p>Regras configuradas no repositório GitHub para a branch <code>main</code> para impedir alterações acidentais e deploys inseguros.</p>
+          <ul class="security-bullet-list">
+            <li>Exigência de Pull Request com revisão dupla.</li>
+            <li>Assinatura de commits obrigatória.</li>
+            <li>Bloqueio de pushes diretos e force push.</li>
+          </ul>
+        </article>
+
+        <article class="security-card">
+          <div class="security-badge">Auditoria</div>
+          <h3>Varredura & CSP</h3>
+          <p>Auditorias sugeridas pelo Google Gemini para proteção ativa contra vulnerabilidades web (OWASP Top 10).</p>
+          <ul class="security-bullet-list">
+            <li>Content Security Policy (CSP) via Meta Tag.</li>
+            <li>Dependabot ativado para alerta de dependências.</li>
+            <li>Secret Scanning ativo contra vazamento de tokens.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION: GEMINI ASSISTANT -->
+    <section class="section" id="gemini-assistant">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Inteligência Artificial</p>
+        <h2>Assistente Gemini Integrado</h2>
+        <p>Interaja com o assistente de IA configurado por Carlos Alberto Junior para tirar dúvidas sobre a implantação e segurança do projeto.</p>
+      </div>
+
+      <div class="gemini-assistant-container reveal">
+        <div class="gemini-info-panel">
+          <p class="lead-card" style="margin-bottom: 0;">Fizemos a implantação do <strong>PortfolioHUB</strong> utilizando técnicas avançadas de IA Generativa. O Google Gemini guiou a criação do plano de deploy, a estruturação de segurança IAM e as práticas de commits semânticos.</p>
+          <div class="feature-grid" style="grid-template-columns: 1fr; gap: 0.8rem;">
+            <article class="feature" style="padding: 1rem;">
+              <h3>Planejamento Automatizado</h3>
+              <p>Trilha de tarefas gerada via Prompt Engineering para garantir conformidade com o cronograma acadêmico.</p>
+            </article>
+            <article class="feature" style="padding: 1rem;">
+              <h3>Auditoria de Código</h3>
+              <p>Revisão de segurança e sugestão de cabeçalhos de CSP e regras de proteção de branch.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="gemini-chat-panel">
+          <div class="gemini-chat-header">
+            <div class="gemini-chat-header-title">
+              <svg class="gemini-sparkle-icon" viewBox="0 0 24 24">
+                <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"/>
+              </svg>
+              <span>Assistente Gemini</span>
+            </div>
+            <div class="gemini-chat-status">
+              <span class="status-dot" style="background: var(--accent); width: 6px; height: 6px; box-shadow: 0 0 6px var(--accent);"></span>
+              Online
+            </div>
+          </div>
+          
+          <div class="gemini-chat-messages" id="gemini-chat-messages">
+            <!-- As mensagens serão inseridas via JavaScript -->
+          </div>
+
+          <div class="gemini-chat-quick-asks">
+            <button class="quick-ask-btn" type="button" data-ask="planejamento">Como o Gemini guiou o Planejamento?</button>
+            <button class="quick-ask-btn" type="button" data-ask="seguranca">Quais as políticas de segurança?</button>
+            <button class="quick-ask-btn" type="button" data-ask="github">Como funciona a API do GitHub?</button>
+            <button class="quick-ask-btn" type="button" data-ask="projetos">Fale sobre os projetos pessoais</button>
+          </div>
+
+          <div class="gemini-chat-input-area">
+            <input class="gemini-chat-input" id="gemini-input" type="text" placeholder="Pergunte ao Gemini sobre o PortfolioHUB..." aria-label="Mensagem para o assistente Gemini">
+            <button class="gemini-chat-send-btn" id="gemini-send" type="button">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="documentacao">
       <div class="section-heading reveal">
         <p class="eyebrow">Documentação</p>
@@ -199,12 +334,14 @@
         <a href="slides/apresentacao.html"><span>Slides</span><strong>Roteiro de vídeo</strong></a>
       </div>
       <div class="checklist reveal" aria-label="Checklist de qualidade da entrega">
-        <h3>Checklist da entrega</h3>
+        <h3>Checklist da entrega final</h3>
         <ul>
-          <li><span></span>README principal e READMEs de projetos</li>
-          <li><span></span>Relatório final em HTML e PDF</li>
-          <li><span></span>Apresentação em HTML para vídeo</li>
-          <li><span></span>Links de GitHub, Pages e LinkedIn</li>
+          <li><span></span>Plano de implantação detalhado</li>
+          <li><span></span>Integração com API do GitHub e estatísticas em tempo real</li>
+          <li><span></span>Gestão de permissões IAM e proteção de branch no GitHub</li>
+          <li><span></span>Políticas de Segurança e CSP recomendadas por IA</li>
+          <li><span></span>Chatbot assistente Gemini integrado e operacional</li>
+          <li><span></span>Slides de apresentação com roteiro de vídeo de 5 minutos</li>
         </ul>
       </div>
     </section>
@@ -214,13 +351,14 @@
         <p class="eyebrow">Git</p>
         <h2>Histórico organizado e versão marcada</h2>
       </div>
-      <p class="section-note reveal">O projeto utiliza commits incrementais para registrar estrutura inicial, página principal, documentação, apresentação, publicação e refinamento visual. A tag <strong>v1.0</strong> identifica a primeira versão estável da entrega.</p>
+      <p class="section-note reveal">O projeto utiliza commits incrementais para registrar estrutura inicial, página principal, documentação, apresentação, publicação e refinamento visual. As tags de versão identificam as principais entregas.</p>
       <ol class="timeline">
         <li class="reveal"><span>01</span><strong>Estrutura inicial</strong><small>Pastas, licença e base do repositório.</small></li>
         <li class="reveal"><span>02</span><strong>Página inicial</strong><small>Interface pública do PortfolioHUB.</small></li>
         <li class="reveal"><span>03</span><strong>Documentação</strong><small>READMEs, relatório e projetos.</small></li>
         <li class="reveal"><span>04</span><strong>Publicação</strong><small>GitHub Pages pela branch main.</small></li>
-        <li class="reveal"><span>05</span><strong>Refinamento</strong><small>Design, interações e links finais.</small></li>
+        <li class="reveal"><span>05</span><strong>Entrega Intermediária v1.0</strong><small>Design, interações e links da versão intermediária.</small></li>
+        <li class="reveal"><span>06</span><strong>Entrega Final v2.0-final</strong><small>Integração com API do GitHub, Painel de Segurança e IA Gemini.</small></li>
       </ol>
     </section>
 

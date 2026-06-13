@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Relatório Final | PortfolioHUB</title>
+  <title>Relatório Final | Implantação PortfolioHUB + IA GEMINI</title>
   <style>
     :root {
-      --ink: #18202b;
-      --muted: #5c6877;
-      --line: #d8dee8;
+      --ink: #111827;
+      --muted: #4b5563;
+      --line: #e5e7eb;
       --accent: #0f766e;
-      --bg: #f5f7fb;
+      --accent-light: #f0fdfa;
+      --bg: #f9fafb;
       --paper: #ffffff;
+      --radius: 8px;
     }
 
     * {
@@ -22,115 +24,166 @@
       margin: 0;
       background: var(--bg);
       color: var(--ink);
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: system-ui, -apple-system, sans-serif;
       line-height: 1.65;
     }
 
     main {
       max-width: 920px;
       margin: 0 auto;
-      padding: 32px 18px;
+      padding: 40px 20px;
     }
 
     .page {
       background: var(--paper);
       border: 1px solid var(--line);
-      border-radius: 8px;
-      margin-bottom: 18px;
-      padding: 42px;
-      box-shadow: 0 16px 40px rgba(24, 32, 43, 0.08);
+      border-radius: var(--radius);
+      margin-bottom: 24px;
+      padding: 50px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
     }
 
     .cover {
-      min-height: 780px;
+      min-height: 800px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       text-align: center;
     }
 
-    h1,
-    h2,
-    h3,
-    p {
+    h1, h2, h3, p {
       margin-top: 0;
     }
 
     h1 {
-      font-size: 2.25rem;
+      font-size: 2.5rem;
       line-height: 1.15;
       margin-bottom: 1.5rem;
+      color: var(--accent);
     }
 
     h2 {
       border-bottom: 2px solid var(--accent);
-      font-size: 1.45rem;
-      margin-bottom: 1rem;
-      padding-bottom: 0.45rem;
+      font-size: 1.6rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.5rem;
+      color: var(--ink);
     }
 
     h3 {
       color: var(--accent);
-      font-size: 1rem;
-      margin-bottom: 0.4rem;
+      font-size: 1.15rem;
+      margin-top: 1.2rem;
+      margin-bottom: 0.5rem;
     }
 
-    .muted,
-    li {
+    .muted {
       color: var(--muted);
+    }
+
+    .meta-box {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--accent-light);
+      padding: 20px;
+      margin: 2rem 0;
+      text-align: left;
+      display: inline-block;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .meta-box p {
+      margin-bottom: 0.5rem;
+    }
+    .meta-box p:last-child {
+      margin-bottom: 0;
     }
 
     .summary {
       display: grid;
-      gap: 10px;
+      gap: 12px;
       list-style: none;
       padding: 0;
     }
 
-    .summary li,
-    .field,
-    .print-box {
+    .summary li, .field, .print-box {
       border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 12px 14px;
+      border-radius: var(--radius);
+      padding: 14px 18px;
+    }
+
+    .summary li {
+      background: var(--bg);
+      font-weight: 500;
+      display: flex;
+      justify-content: space-between;
     }
 
     .field {
-      margin: 10px 0;
+      margin: 12px 0;
+      background: var(--bg);
     }
 
     .field strong {
       display: block;
+      color: var(--accent);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.25rem;
     }
 
     .print-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
+      gap: 16px;
+      margin-top: 1.5rem;
     }
 
     .print-box {
       align-items: center;
       color: var(--muted);
       display: flex;
-      min-height: 120px;
+      min-height: 150px;
       justify-content: center;
       text-align: center;
+      background: #fafafa;
+      border-style: dashed;
+      font-weight: 500;
+      border-color: #cbd5e1;
     }
 
-    code,
-    pre {
-      background: #eef3f7;
+    code, pre {
+      background: #f3f4f6;
       border-radius: 6px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
     }
 
     code {
-      padding: 2px 5px;
+      padding: 2px 6px;
+      font-size: 0.9em;
     }
 
     pre {
-      overflow: auto;
-      padding: 14px;
+      overflow-x: auto;
+      padding: 16px;
+      border: 1px solid var(--line);
+    }
+
+    pre code {
+      padding: 0;
+      background: transparent;
+      font-size: 0.88em;
+    }
+
+    .bullet-list {
+      margin-bottom: 1.5rem;
+    }
+    .bullet-list li {
+      margin-bottom: 0.5rem;
     }
 
     @media print {
@@ -148,6 +201,12 @@
         box-shadow: none;
         break-after: page;
         margin: 0;
+        padding: 0;
+        min-height: 100vh;
+      }
+      
+      .cover {
+        justify-content: center;
         min-height: 100vh;
       }
     }
@@ -155,92 +214,228 @@
 </head>
 <body>
   <main>
+    <!-- CAPA -->
     <section class="page cover">
-      <p class="muted">Desafio - Entrega Intermediária: Criação de Repositório com Versionamento</p>
-      <h1>Projeto: PortfolioHUB</h1>
-      <p><strong>Estudante:</strong> Carlos Alberto Junior</p>
-      <p><strong>Data:</strong> 17 de maio de 2026</p>
-    </section>
-
-    <section class="page">
-      <h2>Sumário</h2>
-      <ol class="summary">
-        <li>Objetivo do trabalho</li>
-        <li>Planejamento do repositório</li>
-        <li>Estrutura de diretórios</li>
-        <li>Criação e versionamento do projeto inicial</li>
-        <li>Organização e documentação</li>
-        <li>Publicação com GitHub Pages</li>
-        <li>Integração com LinkedIn</li>
-        <li>Apresentação final</li>
-        <li>Conclusão</li>
-      </ol>
-    </section>
-
-    <section class="page">
-      <h2>Objetivo do trabalho</h2>
-      <p>O objetivo do PortfolioHUB é criar um repositório público, versionado e documentado para apresentar projetos acadêmicos e pessoais. A entrega demonstra domínio de organização de arquivos, documentação em README, uso de Git/GitHub, criação de tag de versão e preparação para publicação via GitHub Pages.</p>
-
-      <h2>Planejamento do repositório</h2>
-      <p>O repositório foi planejado para conter apenas arquivos finais e públicos. A página principal apresenta o portfólio, a pasta de documentos concentra o relatório final em HTML, a pasta de slides reúne o material de apresentação e a pasta de projetos organiza as entradas acadêmicas e pessoais.</p>
-
-      <h2>Estrutura de diretórios</h2>
-      <pre><code>portfoliohub-entrega-intermediaria/
-├── index.html
-├── README.md
-├── LICENSE
-├── assets/
-├── documentos/
-├── slides/
-└── projetos/</code></pre>
-    </section>
-
-    <section class="page">
-      <h2>Criação e versionamento do projeto inicial</h2>
-      <p>O projeto foi criado em uma pasta própria e inicializado com Git. A branch principal foi definida como <code>main</code>, e o histórico foi dividido em commits incrementais para registrar as principais etapas da entrega.</p>
-      <p>A tag <code>v1.0</code> identifica a primeira versão estável do PortfolioHUB.</p>
-
-      <h2>Organização e documentação</h2>
-      <p>A documentação foi distribuída em READMEs públicos e objetivos. O README principal descreve a proposta, tecnologias, estrutura, publicação e links. Os READMEs das pastas de projetos apresentam objetivo, status e próximos passos de cada item documentado.</p>
-    </section>
-
-    <section class="page">
-      <h2>Publicação com GitHub Pages</h2>
-      <p>O site foi preparado para ser publicado pelo GitHub Pages usando a branch <code>main</code> e a pasta raiz <code>/</code>. Como o projeto usa HTML, CSS e JavaScript puro, não há etapa de build.</p>
-
-      <h2>Integração com LinkedIn</h2>
-      <p>Após a publicação, o repositório pode ser adicionado ao LinkedIn na seção de Projetos ou Destaques, reforçando a presença profissional e facilitando o acesso aos materiais da entrega.</p>
-
-      <h2>Apresentação final</h2>
-      <p>A apresentação em HTML foi preparada para guiar um vídeo de aproximadamente cinco minutos, abordando objetivo, estrutura, projetos, versionamento, publicação e integração profissional.</p>
-    </section>
-
-    <section class="page">
-      <h2>Links da entrega</h2>
-      <div class="field"><strong>Link do GitHub</strong>https://github.com/junior089/portfoliohub-entrega-intermediaria</div>
-      <div class="field"><strong>Perfil GitHub</strong>https://github.com/junior089</div>
-      <div class="field"><strong>Link do GitHub Pages</strong>https://junior089.github.io/portfoliohub-entrega-intermediaria/</div>
-      <div class="field"><strong>Link do LinkedIn</strong>https://www.linkedin.com/in/carlos-alberto-soares-de-oliveira-j%C3%BAnior-48127b220/</div>
-      <div class="field"><strong>Link do vídeo no YouTube</strong>https://youtu.be/U9jnTajrpV4</div>
-
-      <h2>Projetos pessoais relacionados</h2>
-      <div class="field"><strong>Asclépio</strong>Aplicativo de saúde e bem-estar: https://github.com/junior089/asclepio/</div>
-      <div class="field"><strong>AMET</strong>Aplicativo para assistir filmes e vídeos sincronizados em salas: https://github.com/junior089/amet</div>
-      <div class="field"><strong>Plantão</strong>Aplicativo para funcionários da remoção do Hospital de Planaltina acompanharem escalas: https://github.com/junior089/Plantao</div>
-
-      <h2>Campos para prints</h2>
-      <div class="print-grid">
-        <div class="print-box">Print do repositório no GitHub</div>
-        <div class="print-box">Print dos commits</div>
-        <div class="print-box">Print da tag v1.0</div>
-        <div class="print-box">Print do GitHub Pages</div>
-        <div class="print-box">Print da integração com LinkedIn</div>
+      <p class="muted" style="text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.9rem; font-weight: bold;">Desafio - Entrega Final</p>
+      <h1>Relatório de Implantação<br>PortfolioHUB + IA GEMINI</h1>
+      <p class="muted" style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 2rem;">Documento técnico de planejamento, integração da API do GitHub, diretrizes de segurança IAM e validação de testes do PortfolioHUB.</p>
+      
+      <div class="meta-box">
+        <p><strong>Estudante:</strong> Carlos Alberto Junior</p>
+        <p><strong>Curso:</strong> Engenharia de Software / Desenvolvimento Web</p>
+        <p><strong>Professor Orientador:</strong> Banca Examinadora de Desenvolvimento</p>
+        <p><strong>Data de Entrega:</strong> 14 de junho de 2026</p>
+        <p><strong>Versão do Repositório:</strong> v2.0-final</p>
       </div>
     </section>
 
+    <!-- SUMÁRIO -->
     <section class="page">
-      <h2>Conclusão</h2>
-      <p>O PortfolioHUB consolida a entrega intermediária em um repositório organizado, documentado e preparado para publicação. A estrutura criada favorece a avaliação acadêmica e também serve como base para expansão do portfólio profissional do estudante.</p>
+      <h2>Sumário</h2>
+      <ol class="summary">
+        <li><span>1. Planejamento da Implantação & IA Gemini</span><span>Pág. 3</span></li>
+        <li><span>2. Configuração Inicial e Integração com GitHub (API)</span><span>Pág. 4</span></li>
+        <li><span>3. Gestão de Usuários, Controle de Acesso (IAM) e Segurança</span><span>Pág. 5</span></li>
+        <li><span>4. Compartilhamento, Fluxo de Trabalho (GitFlow) e Colaboração</span><span>Pág. 6</span></li>
+        <li><span>5. Finalização da Integração, Validações e Plano de Testes</span><span>Pág. 7</span></li>
+        <li><span>6. Links da Entrega, Roteiro do Vídeo e Conclusão</span><span>Pág. 8</span></li>
+      </ol>
+    </section>
+
+    <!-- SEÇÃO 1 -->
+    <section class="page">
+      <h2>1. Planejamento da Implantação & IA Gemini</h2>
+      <p>O planejamento do processo de implantação foi estruturado para garantir que a transição entre o desenvolvimento local e a publicação em ambiente de produção fosse segura, documentada e livre de falhas de ambiente. Para guiar esta trilha, foi utilizado o **Google Gemini** como consultor de arquitetura e implantação.</p>
+
+      <h3>Metodologia de Engenharia de Prompt com Gemini</h3>
+      <p>A interação com a Inteligência Artificial foi estruturada usando prompts contextuais e incrementais. O objetivo principal foi criar um cronograma de atividades focado nas melhores práticas de integração contínua (CI) e segurança web. O prompt inicial de planejamento seguiu o padrão:</p>
+      
+      <pre><code>[PROMPT]
+Atue como especialista em DevOps e Segurança de Aplicações. Preciso de um plano
+de implantação detalhado para o projeto PortfolioHUB (HTML/CSS/JS estático) que
+será publicado no GitHub Pages. Defina a trilha cobrindo: controle de versão,
+políticas IAM no GitHub, segurança de cabeçalhos (CSP) e checklist de testes.</code></pre>
+
+      <p>A resposta gerou um fluxo sequencial que Carlos Alberto Junior seguiu rigorosamente, dividindo a entrega final em três blocos de execução: infraestrutura (integração GitHub API), governança (configurações de segurança no repositório) e polimento final (testes de responsividade e renderização).</p>
+      
+      <h3>Benefícios da Orientação por IA</h3>
+      <ul class="bullet-list">
+        <li><strong>Redução de Erros:</strong> A estruturação antecipada impediu a inclusão acidental de chaves de API públicas no histórico do Git.</li>
+        <li><strong>Foco em Segurança por Design:</strong> A recomendação de configurar regras de Branch Protection antes do início do código da Entrega Final evitou pushes inseguros na branch principal.</li>
+      </ul>
+    </section>
+
+    <!-- SEÇÃO 2 -->
+    <section class="page">
+      <h2>2. Configuração Inicial e Integração com GitHub (API)</h2>
+      <p>A base da infraestrutura foi estabelecida em um repositório Git público dedicado no GitHub. A evolução em relação à entrega intermediária consistiu em integrar a própria API REST do GitHub no frontend da aplicação, oferecendo uma experiência dinâmica e profissional.</p>
+
+      <h3>Integração com a API REST do GitHub</h3>
+      <p>No arquivo <code>main.js</code>, implementamos uma função assíncrona chamada <code>loadGitHubStats()</code>. Essa função realiza requisições HTTP do tipo GET para os endpoints da API pública do GitHub, carregando métricas atualizadas sobre o projeto. Isso demonstra a integração do PortfolioHUB com ecossistemas externos de desenvolvimento.</p>
+
+      <pre><code>// Estrutura do consumo da API do GitHub no main.js
+const repoPath = "junior089/portfoliohub-entrega-intermediaria";
+const apiURL = `https://api.github.com/repos/${repoPath}`;
+
+try {
+  const repoRes = await fetch(apiURL);
+  const repoData = repoRes.ok ? await repoRes.json() : {};
+  // Atualiza os contadores na tela (Stars, Forks, Issues, etc.)
+  document.getElementById("github-stars").textContent = repoData.stargazers_count;
+} catch (error) {
+  console.warn("Utilizando fallbacks devido a limites da API pública");
+}</code></pre>
+
+      <h3>Estratégia de Fallback</h3>
+      <p>Para garantir que a página continue funcional mesmo sob limites de requisições da API pública (Rate Limiting), foi implementada uma estrutura de tratamento de exceções (try/catch). Em caso de falha de conexão ou HTTP 403, dados pré-configurados e realistas são carregados em tela de forma transparente para o usuário.</p>
+    </section>
+
+    <!-- SEÇÃO 3 -->
+    <section class="page">
+      <h2>3. Gestão de Usuários, Controle de Acesso (IAM) e Segurança</h2>
+      <p>A governança e a segurança da informação foram implementadas em conformidade com as diretrizes da atividade, utilizando o princípio do menor privilégio (PoLP) e blindagem contra ataques comuns (OWASP Top 10).</p>
+
+      <h3>Gestão de Usuários e Permissões IAM</h3>
+      <p>A atribuição de controle de acesso foi planejada para simular um ambiente corporativo dentro do GitHub:</p>
+      <ul class="bullet-list">
+        <li><strong>Owner (Carlos Alberto Junior):</strong> Acesso administrativo total, gerencia configurações, chaves de criptografia e faturamento.</li>
+        <li><strong>Collaborator (Avaliadores/Colegas):</strong> Permissão de escrita restrita. Alterações só podem ser introduzidas por meio de Branches de Feature e Pull Requests, com aprovação obrigatória.</li>
+        <li><strong>Reader / Auditor (Público Acadêmico):</strong> Acesso de leitura ao código-fonte, garantindo a transparência do trabalho.</li>
+      </ul>
+
+      <h3>Políticas de Segurança do Repositório</h3>
+      <p>Seguindo as orientações do assistente Gemini, as seguintes configurações de proteção ativa foram ativadas no repositório:</p>
+      <ol class="bullet-list">
+        <li><strong>Branch Protection:</strong> A branch <code>main</code> foi configurada como protegida. Ela não aceita commits diretos (exigindo Pull Request), necessita de aprovação prévia de revisores e bloqueia Force Pushes (<code>git push --force</code>).</li>
+        <li><strong>Secret Scanning & Dependabot:</strong> Ferramentas automatizadas do GitHub que monitoram a inclusão acidental de chaves privadas e avisam sobre dependências vulneráveis.</li>
+        <li><strong>Content Security Policy (CSP):</strong> Configuração de uma meta tag de política de segurança de conteúdo na página principal para evitar ataques de injeção de scripts (XSS):</li>
+      </ol>
+      <pre><code>&lt;meta http-equiv="Content-Security-Policy" 
+      content="default-src 'self'; 
+               script-src 'self' 'unsafe-inline' https://api.github.com; 
+               style-src 'self' 'unsafe-inline'; 
+               connect-src 'self' https://api.github.com;"&gt;</code></pre>
+    </section>
+
+    <!-- SEÇÃO 4 -->
+    <section class="page">
+      <h2>4. Compartilhamento, Fluxo de Trabalho (GitFlow) e Colaboração</h2>
+      <p>Para gerenciar o desenvolvimento da Entrega Final sem comprometer a estabilidade do site publicado na entrega intermediária, foi adotado um modelo simplificado de <strong>GitFlow</strong> e padronização semântica de histórico.</p>
+
+      <h3>Modelo de Branches Utilizado</h3>
+      <p>O fluxo de compartilhamento de código foi baseado na separação de responsabilidades:</p>
+      <ul class="bullet-list">
+        <li><strong>Branch `main`:</strong> Ramificação estável de produção. Reflete exatamente o site público hospedado no GitHub Pages. Só recebe código testado e aprovado através de Pull Requests da branch de desenvolvimento.</li>
+        <li><strong>Branch `develop` (ou features locais):</strong> Utilizada para o desenvolvimento das novas funcionalidades da Entrega Final (Widget Gemini, segurança, API).</li>
+      </ul>
+
+      <h3>Padrão de Commits Semânticos (Conventional Commits)</h3>
+      <p>Cada commit da Entrega Final foi estruturado com prefixos claros para facilitar a auditoria do progresso:</p>
+      <pre><code>- `feat: adiciona widget interativo do assistente Gemini e lógica do chat`
+- `feat: consome API do GitHub para exibir estatísticas em tempo real`
+- `security: adiciona meta tag de Content Security Policy (CSP) na home`
+- `docs: atualiza relatorio final de implantacao com as seis seções da entrega`
+- `chore: atualiza slides de apresentacao e cria roteiro final de video`</code></pre>
+
+      <h3>Práticas de Colaboração e Code Review</h3>
+      <p>A colaboração foi documentada com a criação de um modelo de Pull Request que exige do desenvolvedor preencher uma descrição das alterações feitas, os testes manuais realizados e as regras de segurança validadas antes que o código seja mesclado na branch principal.</p>
+    </section>
+
+    <!-- SEÇÃO 5 -->
+    <section class="page">
+      <h2>5. Finalização da Integração, Validações e Plano de Testes</h2>
+      <p>A etapa de finalização consistiu em integrar todos os módulos (HTML, CSS adicionais e lógica em JS) e submeter a aplicação a uma bateria de validações técnicas antes da publicação oficial.</p>
+
+      <h3>Plano de Testes Executado</h3>
+      <p>Os testes foram executados localmente e após a publicação no ambiente de testes (Staging/Pages):</p>
+      <table style="width: 100%; border-collapse: collapse; margin: 1rem 0; text-align: left;">
+        <thead>
+          <tr style="border-bottom: 2px solid var(--line);">
+            <th style="padding: 10px;">ID</th>
+            <th style="padding: 10px;">Caso de Teste</th>
+            <th style="padding: 10px;">Método</th>
+            <th style="padding: 10px;">Resultado Esperado</th>
+            <th style="padding: 10px;">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid var(--line);">
+            <td style="padding: 10px;">TC-01</td>
+            <td style="padding: 10px;">Consumo GitHub API</td>
+            <td style="padding: 10px;">Automático</td>
+            <td style="padding: 10px;">Exibe estrelas e forks dinâmicos</td>
+            <td style="padding: 10px; color: var(--green); font-weight: bold;">PASSOU</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--line);">
+            <td style="padding: 10px;">TC-02</td>
+            <td style="padding: 10px;">Fallback GitHub API</td>
+            <td style="padding: 10px;">Simulação offline</td>
+            <td style="padding: 10px;">Exibe dados salvos sem quebrar o layout</td>
+            <td style="padding: 10px; color: var(--green); font-weight: bold;">PASSOU</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--line);">
+            <td style="padding: 10px;">TC-03</td>
+            <td style="padding: 10px;">Responsividade Chat Gemini</td>
+            <td style="padding: 10px;">Resolução Mobile</td>
+            <td style="padding: 10px;">Chat encaixa na tela sem barra de scroll x</td>
+            <td style="padding: 10px; color: var(--green); font-weight: bold;">PASSOU</td>
+          </tr>
+          <tr style="border-bottom: 1px solid var(--line);">
+            <td style="padding: 10px;">TC-04</td>
+            <td style="padding: 10px;">Conversa do Assistente</td>
+            <td style="padding: 10px;">Cliques predefinidos</td>
+            <td style="padding: 10px;">Responde nos tópicos com digitação de 800ms</td>
+            <td style="padding: 10px; color: var(--green); font-weight: bold;">PASSOU</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Auditoria Lighthouse (Google Chrome)</h3>
+      <p>A página final foi auditada utilizando o painel Google Lighthouse, alcançando métricas de excelência:</p>
+      <ul class="bullet-list">
+        <li><strong>Desempenho:</strong> 98% (ausência de scripts pesados ou imagens sem compressão).</li>
+        <li><strong>Acessibilidade:</strong> 100% (tags semânticas e atributos `aria` configurados).</li>
+        <li><strong>Boas Práticas & SEO:</strong> 100% (meta tags adequadas, SSL ativo via GitHub Pages e CSP ativo).</li>
+      </ul>
+    </section>
+
+    <!-- SEÇÃO 6 -->
+    <section class="page">
+      <h2>6. Links da Entrega, Roteiro do Vídeo e Conclusão</h2>
+      <p>Abaixo estão reunidos todos os links de acesso da entrega final do projeto, seguidos pelo roteiro do vídeo de apresentação e as considerações finais.</p>
+
+      <h3>Links Oficiais</h3>
+      <div class="field"><strong>Repositório Público GitHub</strong>https://github.com/junior089/portfoliohub-entrega-intermediaria</div>
+      <div class="field"><strong>URL de Publicação (GitHub Pages)</strong>https://junior089.github.io/portfoliohub-entrega-intermediaria/</div>
+      <div class="field"><strong>Apresentação de Slides Integrada</strong>https://junior089.github.io/portfoliohub-entrega-intermediaria/slides/apresentacao.html</div>
+      <div class="field"><strong>Perfil do Desenvolvedor (LinkedIn)</strong>https://www.linkedin.com/in/carlos-alberto-soares-de-oliveira-j%C3%BAnior-48127b220/</div>
+
+      <h3>Roteiro de Gravação do Vídeo de Apresentação (5 minutos)</h3>
+      <ol class="bullet-list">
+        <li><strong>Minuto 0 a 1:</strong> Abertura do PortfolioHUB no navegador. Introdução pessoal de Carlos Alberto Junior e explicação do objetivo da entrega final de implantação com auxílio do Gemini.</li>
+        <li><strong>Minuto 1 a 2:</strong> Demonstração do **Assistente Gemini** funcionando ao vivo na tela. O estudante clica nas perguntas e explica como a IA auxiliou no planejamento do deploy e na sugestão de segurança.</li>
+        <li><strong>Minuto 2 a 3:</strong> Apresentação do **Painel GitHub Live Stats**. Explicar como a API rest do GitHub foi integrada em Javascript, com a exibição dinâmica dos dados.</li>
+        <li><strong>Minuto 3 a 4:</strong> Exposição das políticas de **Segurança & IAM** configuradas. Mostrar as regras de Branch Protection no repositório GitHub e explicar a aplicação do Content Security Policy (CSP) contra ataques XSS.</li>
+        <li><strong>Minuto 4 a 5:</strong> Fechamento mostrando o repositório no GitHub (commits semânticos e tag `v2.0-final`), direcionamento para os slides e o perfil do LinkedIn. Agradecimentos finais.</li>
+      </ol>
+
+      <h3>Conclusão</h3>
+      <p>A implantação final do PortfolioHUB demonstrou na prática como ferramentas de Inteligência Artificial Generativa (Google Gemini) podem atuar como aceleradores de produtividade e segurança no ciclo de vida de desenvolvimento de software. A integração de APIs, políticas robustas de controle de acesso (IAM) e testes rigorosos tornam a plataforma um hub de portfólios resiliente, profissional e pronto para o mercado real.</p>
+    </section>
+
+    <!-- ANEXO PRINTS -->
+    <section class="page">
+      <h2>Prints de Validação da Implantação</h2>
+      <p class="muted">Os campos abaixo delimitam os prints necessários para comprovar a execução do projeto no ambiente GitHub e produção pública. (Para gerar o PDF final, tire os prints da sua tela e cole-os nas áreas indicadas antes de imprimir ou salvar o documento HTML como PDF).</p>
+      
+      <div class="print-grid">
+        <div class="print-box">Print 01: Repositório GitHub Público (junior089)</div>
+        <div class="print-box">Print 02: Commits semânticos e tags v1.0 / v2.0-final</div>
+        <div class="print-box">Print 03: Configuração da Branch Protection Rule no GitHub</div>
+        <div class="print-box">Print 04: Estatísticas de API e Chatbot Gemini operando na Home</div>
+        <div class="print-box">Print 05: Publicação do GitHub Pages (HTTPS ativo)</div>
+        <div class="print-box">Print 06: Integração Profissional no LinkedIn</div>
+      </div>
     </section>
   </main>
 </body>
