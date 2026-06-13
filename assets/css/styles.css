@@ -88,16 +88,16 @@ body.light-theme .site-header { background: rgba(255,255,255,.78); }
 
 .section { width: min(var(--max), calc(100% - 2rem)); margin-inline: auto; padding-block: clamp(3.2rem, 7vw, 6rem); scroll-margin-top: 5rem; }
 .section.compact { padding-block: 1.2rem; }
-.hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(320px, .85fr); gap: clamp(1.5rem, 4vw, 3rem); align-items: stretch; min-height: calc(100vh - 84px); padding-top: clamp(2rem, 5vw, 5rem); }
+.hero { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.7fr); gap: clamp(1.5rem, 4vw, 3rem); align-items: center; min-height: calc(100vh - 84px); padding-top: clamp(1.5rem, 4vw, 3rem); }
 .hero-content, .hero-panel, .lead-card, .feature, .metric, .project-card, .security-card, .info-card { border: 1px solid var(--line); background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04)); border-radius: var(--radius); box-shadow: var(--shadow); }
-.hero-content { padding: clamp(1.5rem, 4vw, 3rem); display: flex; flex-direction: column; justify-content: center; }
+.hero-content { padding: clamp(1.5rem, 4vw, 2.5rem); display: flex; flex-direction: column; justify-content: center; }
 .eyebrow { margin: 0 0 1rem; color: var(--accent); text-transform: uppercase; letter-spacing: .12em; font-size: .78rem; font-weight: 850; }
 h1, h2, h3, p { margin-top: 0; }
-h1 { font-size: clamp(2.6rem, 8vw, 6rem); line-height: .92; letter-spacing: -.07em; margin-bottom: 1.35rem; }
+h1 { font-size: clamp(2.2rem, 4vw, 3.4rem); line-height: 1.1; letter-spacing: -.03em; margin-bottom: 1rem; }
 h2 { font-size: clamp(2rem, 4vw, 3.6rem); line-height: 1.02; letter-spacing: -.045em; margin-bottom: 1rem; }
 h3 { font-size: 1.15rem; margin-bottom: .55rem; }
-.hero-text { max-width: 62ch; color: var(--muted); font-size: clamp(1.05rem, 1.7vw, 1.25rem); }
-.actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.2rem; }
+.hero-text { max-width: 56ch; color: var(--muted); font-size: clamp(1rem, 1.5vw, 1.12rem); margin-bottom: 0.8rem; }
+.actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 0.8rem; }
 .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 3rem; border-radius: 999px; padding: .85rem 1.15rem; font-weight: 800; border: 1px solid var(--line); }
 .btn-primary { background: var(--accent); color: #06101f; border-color: transparent; }
 .btn-secondary { background: rgba(255,255,255,.1); color: var(--text); }
