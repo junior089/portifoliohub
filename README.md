@@ -1,35 +1,70 @@
 # PortfolioHUB - Entrega Final
 
-Projeto acadêmico de implantação do **PortfolioHUB + IA Gemini**. A entrega demonstra uma plataforma estática para centralizar projetos e documentação, usando GitHub como ambiente de versionamento, GitHub Pages como publicação e Google Gemini como apoio ao planejamento, segurança, testes e apresentação.
+Projeto academico de implantacao do **PortfolioHUB + IA Gemini**. A entrega demonstra uma plataforma estatica para centralizar, exibir e gerenciar projetos digitais, usando GitHub como ambiente de versionamento, GitHub Pages como publicacao e Google Gemini como apoio ao planejamento, seguranca, testes e apresentacao.
 
 ## Objetivo
 
-Implantar uma plataforma de portfólio digital com:
+Implantar uma plataforma de portfolio digital com:
 
-- plano de implantação documentado;
-- integração com GitHub e consumo da GitHub REST API;
-- política de gestão de usuários, segurança e controle de acesso;
-- documentação do fluxo de versionamento e colaboração;
-- testes de validação da entrega;
-- relatório final em PDF e roteiro para vídeo no YouTube.
+- plano de implantacao documentado;
+- integracao com GitHub e consumo da GitHub REST API;
+- gestao demonstrativa de usuarios, papeis e permissoes;
+- cadastro, edicao, exclusao, busca e filtro de projetos;
+- politica de seguranca e controle de acesso;
+- documentacao do fluxo de versionamento e colaboracao;
+- testes de validacao da entrega;
+- relatorio final em PDF e roteiro para video no YouTube.
 
 ## Como visualizar
 
-O projeto é 100% estático. Basta abrir o arquivo `index.html` no navegador.
+O projeto e 100% estatico. Basta abrir o arquivo `index.html` no navegador ou acessar:
+
+```text
+https://junior089.github.io/portfoliohub/
+```
+
+Para rodar localmente:
 
 ```bash
 gh repo clone junior089/portfoliohub
 cd portfoliohub
-start index.html
+python -m http.server 4173
 ```
 
-No macOS/Linux:
+Depois abra `http://localhost:4173`.
 
-```bash
-open index.html
-# ou
-xdg-open index.html
-```
+## Contas de demonstracao
+
+| Usuario | Senha | Papel | Permissoes |
+|---|---|---|---|
+| `admin` | `admin123` | Owner | criar, editar, excluir, publicar |
+| `editor` | `editor123` | Collaborator | criar, editar |
+| `viewer` | `viewer123` | Reader | visualizar |
+
+O login e demonstrativo para atender ao fluxo de gestao de usuarios em uma aplicacao estatica. Em producao, autenticacao real exigiria backend, OAuth/GitHub Login ou outro provedor de identidade.
+
+## Funcionalidades implementadas
+
+- Pagina inicial responsiva com navegacao por secoes.
+- Dark mode como padrao e tema claro opcional.
+- Login demonstrativo com perfis `admin`, `editor` e `viewer`.
+- Gestao local de projetos com cadastro, edicao, exclusao, busca e filtro por categoria.
+- Controle de permissoes por papel: Owner, Collaborator e Reader.
+- Painel que consulta a GitHub REST API publica.
+- Fallback local caso a API esteja indisponivel.
+- Documentacao de suporte e orientacoes geradas com apoio do Google Gemini.
+- Content Security Policy no `index.html`.
+- Documentacao de seguranca, controle de acesso, testes e apresentacao.
+
+## Seguranca aplicada/documentada
+
+- CSP restritiva, sem `unsafe-inline` no `index.html`.
+- Nenhum token do GitHub no front-end.
+- Consulta somente a dados publicos da GitHub REST API.
+- Login demonstrativo sem promessa de seguranca real em producao.
+- Recomendacao de branch protection para `main`.
+- Pull Request Template para revisao de alteracoes.
+- Documentos de IAM e politicas de colaboracao em `docs/`.
 
 ## Estrutura
 
@@ -42,8 +77,7 @@ portfoliohub/
 │   └── pull_request_template.md
 ├── assets/
 │   ├── css/styles.css
-│   ├── js/main.js
-│   └── img/evidencias/
+│   └── js/main.js
 ├── docs/
 │   ├── checklist-entrega.md
 │   ├── controle-acesso.md
@@ -65,40 +99,20 @@ portfoliohub/
     └── apresentacao.html
 ```
 
-## Funcionalidades implementadas
-
-- Página inicial responsiva com navegação por seções.
-- Tema claro/escuro com persistência em `localStorage`.
-- Filtro de projetos por categoria.
-- Painel que consulta a GitHub REST API.
-- Fallback local caso a API esteja indisponível.
-- Documentação de suporte e orientações geradas pelo Google Gemini.
-- Política de Content Security Policy no `index.html`.
-- Documentação de segurança, controle de acesso, testes e apresentação.
-
-## Segurança aplicada/documentada
-
-- CSP restritiva, sem `unsafe-inline` no `index.html`.
-- Nenhuma credencial no código-fonte.
-- Nenhuma chamada externa ou chaves de API expostas no código.
-- Recomendação de branch protection para `main`.
-- Pull Request Template para revisão de alterações.
-- Documentos de IAM e políticas de colaboração em `docs/`.
-
-## Entregáveis
+## Entregaveis
 
 - Site: `index.html`
-- Relatório final: `documentos/relatorio-final.pdf`
-- Relatório editável: `documentos/relatorio-final.html`
+- Relatorio final: `documentos/relatorio-final.pdf`
+- Relatorio editavel: `documentos/relatorio-final.html`
 - Slides: `slides/apresentacao.html`
-- Roteiro de vídeo: `docs/video-roteiro.md`
+- Roteiro de video: `docs/video-roteiro.md`
 - Checklist: `docs/checklist-entrega.md`
 
 ## Links
 
-- Repositório: `https://github.com/junior089/portfoliohub`
+- Repositorio: `https://github.com/junior089/portfoliohub`
 - GitHub Pages: `https://junior089.github.io/portfoliohub/`
-- Vídeo final no YouTube: substituir pelo link final publicado.
+- Video final no YouTube: substituir pelo link final publicado.
 
 ## Autor
 

@@ -33,3 +33,10 @@ Recomendacoes para o repositorio:
 - A integracao do painel usa apenas dados publicos da GitHub REST API.
 - Se algum token for compartilhado por engano, ele deve ser revogado imediatamente no GitHub.
 - Token so deve ser usado em um backend seguro, GitHub Action ou servico proxy que nao exponha o segredo ao navegador.
+
+## Login demonstrativo
+
+- O painel possui usuarios de demonstracao para evidenciar gestao de acesso no PortfolioHUB.
+- As contas `admin`, `editor` e `viewer` aplicam permissoes diferentes na interface.
+- A sessao e salva em `sessionStorage`; projetos criados ou editados ficam em `localStorage`.
+- Esta abordagem nao substitui autenticacao real. Para uso em producao, seria necessario backend, OAuth/GitHub Login ou outro provedor de identidade.

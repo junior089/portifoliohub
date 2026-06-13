@@ -28,6 +28,7 @@
     <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
       <a href="#inicio">Visão geral</a>
       <a href="#projetos">Projetos</a>
+      <a href="#painel">Painel</a>
       <a href="#acesso">Acesso</a>
       <a href="#github">GitHub</a>
       <a href="#seguranca">Segurança</a>
@@ -114,6 +115,90 @@
       </div>
     </section>
 
+    <section class="section manager-section" id="painel">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Gestão do hub</p>
+        <h2>Painel com login e permissões</h2>
+        <p>Esta área demonstra a gestão de usuários e projetos exigida no desafio. Como a entrega é estática, os dados são salvos no navegador com `localStorage` e a sessão usa `sessionStorage`.</p>
+      </div>
+
+      <div class="manager-layout reveal">
+        <form class="auth-panel" id="login-form" aria-label="Entrar no PortfolioHUB">
+          <div class="panel-title">
+            <h3>Acesso</h3>
+            <p>Use uma conta de demonstração para entrar no painel.</p>
+          </div>
+          <label>
+            <span>Usuário</span>
+            <input id="login-user" name="user" type="text" autocomplete="username" placeholder="admin">
+          </label>
+          <label>
+            <span>Senha</span>
+            <input id="login-pass" name="password" type="password" autocomplete="current-password" placeholder="admin123">
+          </label>
+          <button class="btn btn-primary" type="submit">Entrar</button>
+          <p class="form-message" id="login-message" role="status"></p>
+          <div class="demo-accounts" aria-label="Contas de demonstração">
+            <strong>Contas demo</strong>
+            <span>admin / admin123</span>
+            <span>editor / editor123</span>
+            <span>viewer / viewer123</span>
+          </div>
+        </form>
+
+        <div class="session-panel" id="session-panel" hidden>
+          <div class="panel-title">
+            <h3>Sessão ativa</h3>
+            <p id="session-summary">Nenhum usuário autenticado.</p>
+          </div>
+          <div class="permission-strip" id="permission-strip"></div>
+          <button class="btn btn-secondary" id="logout-button" type="button">Sair</button>
+        </div>
+
+        <form class="project-form" id="project-form" aria-label="Gerenciar projeto">
+          <input type="hidden" id="project-id">
+          <div class="panel-title">
+            <h3 id="project-form-title">Novo projeto</h3>
+            <p id="project-form-help">Entre como admin ou editor para cadastrar e alterar projetos.</p>
+          </div>
+          <div class="form-grid">
+            <label>
+              <span>Nome</span>
+              <input id="project-name" type="text" required placeholder="Nome do projeto">
+            </label>
+            <label>
+              <span>Categoria</span>
+              <select id="project-type" required>
+                <option value="academico">Acadêmico</option>
+                <option value="pessoal">Pessoal</option>
+              </select>
+            </label>
+            <label>
+              <span>Status</span>
+              <select id="project-status" required>
+                <option value="Em produção">Em produção</option>
+                <option value="Em revisão">Em revisão</option>
+                <option value="Planejado">Planejado</option>
+              </select>
+            </label>
+            <label>
+              <span>Tecnologias</span>
+              <input id="project-tech" type="text" required placeholder="HTML, CSS, JavaScript">
+            </label>
+          </div>
+          <label>
+            <span>Descrição</span>
+            <textarea id="project-description" rows="4" required placeholder="Descreva objetivo, uso e contexto do projeto"></textarea>
+          </label>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Salvar projeto</button>
+            <button class="btn btn-secondary" id="cancel-edit" type="button">Cancelar edição</button>
+          </div>
+          <p class="form-message" id="project-message" role="status"></p>
+        </form>
+      </div>
+    </section>
+
     <section class="section" id="projetos">
       <div class="section-heading reveal">
         <p class="eyebrow">Portfólio</p>
@@ -133,39 +218,7 @@
         </div>
       </div>
 
-      <div class="project-grid" id="project-grid">
-        <article class="project-card reveal featured" data-project-type="academico" data-search="portfoliohub academico html css javascript github pages seguranca portfolio">
-          <div class="card-topline"><span>Acadêmico</span><strong>Entrega final</strong></div>
-          <h3>PortfolioHUB</h3>
-          <p>Projeto principal da implantação, reunindo site, documentação, relatório, slides, GitHub API e evidências de segurança.</p>
-          <ul class="tech-list"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>GitHub Pages</li></ul>
-          <a class="inline-link" href="projetos/academicos/portfoliohub/README.md">Ler documentação</a>
-        </article>
-
-        <article class="project-card reveal" data-project-type="pessoal" data-search="asclepio saude flutter firebase mobile sintomas rotina localizacao">
-          <div class="card-topline"><span>Pessoal</span><strong>Saúde</strong></div>
-          <h3>Asclépio</h3>
-          <p>Aplicativo de saúde para rotina, sintomas, localização e acompanhamento de indicadores pessoais.</p>
-          <ul class="tech-list"><li>Flutter</li><li>Firebase</li><li>Mobile</li></ul>
-          <a class="inline-link" href="projetos/pessoais/asclepio/README.md">Ler README</a>
-        </article>
-
-        <article class="project-card reveal" data-project-type="pessoal" data-search="amet streaming web ux tempo real video salas sincronizadas">
-          <div class="card-topline"><span>Pessoal</span><strong>Streaming</strong></div>
-          <h3>AMET</h3>
-          <p>Conceito de plataforma para assistir vídeos em salas sincronizadas, com foco em experiência compartilhada.</p>
-          <ul class="tech-list"><li>Web</li><li>UX</li><li>Tempo real</li></ul>
-          <a class="inline-link" href="projetos/pessoais/amet/README.md">Ler README</a>
-        </article>
-
-        <article class="project-card reveal" data-project-type="pessoal" data-search="plantao android kotlin java escalas agenda operacional">
-          <div class="card-topline"><span>Pessoal</span><strong>Android</strong></div>
-          <h3>Plantão</h3>
-          <p>Aplicativo para consulta e organização de escalas, com foco em clareza de agenda e controle operacional.</p>
-          <ul class="tech-list"><li>Android</li><li>Kotlin/Java</li><li>Mobile</li></ul>
-          <a class="inline-link" href="projetos/pessoais/plantao/README.md">Ler README</a>
-        </article>
-      </div>
+      <div class="project-grid" id="project-grid" aria-live="polite"></div>
 
       <p class="empty-state" id="empty-projects" hidden>Nenhum projeto encontrado com os filtros atuais.</p>
     </section>
