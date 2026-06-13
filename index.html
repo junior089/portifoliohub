@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
-  <meta name="description" content="PortfolioHUB - entrega final com implantação, GitHub, segurança, documentação, testes e apoio do Google Gemini.">
+  <meta name="description" content="PortfolioHUB: plataforma centralizada para exibir e gerenciar projetos digitais, com GitHub, gestão de usuários, segurança e controle de acesso.">
   <meta name="author" content="Carlos Alberto Junior">
-  <title>PortfolioHUB | Entrega Final</title>
+  <meta property="og:title" content="PortfolioHUB">
+  <meta property="og:description" content="Implantação acadêmica do PortfolioHUB com projetos, segurança, GitHub e documentação de acesso.">
+  <meta property="og:type" content="website">
+  <title>PortfolioHUB | Gestão de projetos digitais</title>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -16,224 +19,245 @@
   <header class="site-header">
     <a class="brand" href="#inicio" aria-label="PortfolioHUB - início">
       <span class="brand-mark" aria-hidden="true">PH</span>
-      <span>PortfolioHUB</span>
+      <span class="brand-copy">
+        <strong>PortfolioHUB</strong>
+        <small>projetos digitais</small>
+      </span>
     </a>
 
-    <div class="header-actions">
-      <button class="theme-toggle" type="button" aria-label="Alternar tema">Tema claro</button>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
-    </div>
-
     <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
-      <a href="#inicio">Início</a>
-      <a href="#sobre">Sobre</a>
+      <a href="#inicio">Visão geral</a>
       <a href="#projetos">Projetos</a>
+      <a href="#acesso">Acesso</a>
       <a href="#github">GitHub</a>
       <a href="#seguranca">Segurança</a>
-      <a href="#gemini">Gemini</a>
+      <a href="#entrega">Entrega</a>
     </nav>
+
+    <div class="header-actions">
+      <button class="icon-button theme-toggle" type="button" aria-label="Alternar tema" title="Alternar tema">
+        <span aria-hidden="true">Tema</span>
+      </button>
+      <button class="icon-button nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu" title="Menu">
+        <span aria-hidden="true">Menu</span>
+      </button>
+    </div>
   </header>
 
   <main id="conteudo">
     <section class="hero section" id="inicio">
-      <div class="hero-content reveal">
-        <p class="eyebrow">Entrega final - Implantação PortfolioHUB + IA Gemini</p>
-        <h1>Hub acadêmico para projetos, documentação e versionamento.</h1>
-        <p class="hero-text">O PortfolioHUB centraliza projetos acadêmicos e pessoais, documenta o processo de implantação, utiliza GitHub para controle de versão e registra o uso do Google Gemini como apoio no planejamento, segurança e testes.</p>
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Implantação acadêmica</p>
+        <h1>PortfolioHUB</h1>
+        <p class="hero-text">Uma plataforma centralizada para exibir, organizar e gerenciar projetos digitais, com documentação de implantação, segurança, gestão de usuários e colaboração controlada por Git e GitHub.</p>
         <div class="actions" aria-label="Ações principais">
-          <a class="btn btn-primary" href="https://github.com/junior089/portfoliohub-entrega-intermediaria" target="_blank" rel="noopener noreferrer">Abrir repositório</a>
-          <a class="btn btn-secondary" href="documentos/relatorio-final.pdf">Baixar relatório PDF</a>
-          <a class="btn btn-ghost" href="slides/apresentacao.html">Ver apresentação</a>
-        </div>
-        <div class="hero-meta" aria-label="Resumo da entrega">
-          <span><strong>6</strong> seções exigidas</span>
-          <span><strong>API</strong> GitHub</span>
-          <span><strong>CSP</strong> aplicada</span>
-          <span><strong>PDF</strong> final</span>
+          <a class="btn btn-primary" href="#projetos">Explorar projetos</a>
+          <a class="btn btn-secondary" href="documentos/relatorio-final.pdf">Relatório PDF</a>
+          <a class="btn btn-ghost" href="slides/apresentacao.html">Apresentação</a>
         </div>
       </div>
 
-      <aside class="hero-panel reveal" aria-label="Status da implantação">
-        <div class="panel-header">
+      <aside class="control-room reveal" aria-label="Painel da implantação">
+        <div class="panel-top">
           <span class="status-dot" aria-hidden="true"></span>
-          <strong>Status da implantação</strong>
+          <div>
+            <strong>Implantação ativa</strong>
+            <small>GitHub Pages + repositório versionado</small>
+          </div>
         </div>
-        <ul class="status-list">
-          <li><span></span>Repositório GitHub dedicado ao projeto</li>
-          <li><span></span>GitHub Pages documentado para publicação</li>
-          <li><span></span>Integração com GitHub REST API</li>
-          <li><span></span>Políticas de acesso e segurança documentadas</li>
-          <li><span></span>Relatório, testes e roteiro de vídeo incluídos</li>
-        </ul>
 
-        <div class="github-stats-card" aria-label="Estatísticas do repositório via API do GitHub">
-          <div class="github-stats-header">
-            <span class="github-stats-title">GitHub API</span>
-            <span class="sync-pill" id="github-state">Sincronizando</span>
+        <div class="deployment-grid" aria-label="Resumo da atividade">
+          <article>
+            <span data-count="4">0</span>
+            <small>projetos no hub</small>
+          </article>
+          <article>
+            <span data-count="5">0</span>
+            <small>perfis de acesso</small>
+          </article>
+          <article>
+            <span data-count="6">0</span>
+            <small>controles de segurança</small>
+          </article>
+          <article>
+            <span data-count="100">0</span>
+            <small>% estático</small>
+          </article>
+        </div>
+
+        <div class="github-card" aria-label="Estatísticas do repositório via API do GitHub">
+          <div class="github-card-header">
+            <span>GitHub REST API</span>
+            <strong id="github-state">Sincronizando</strong>
           </div>
-          <div class="github-stats-grid">
-            <div class="github-stat-item"><span class="github-stat-val" id="github-stars">-</span><span class="github-stat-lbl">Stars</span></div>
-            <div class="github-stat-item"><span class="github-stat-val" id="github-forks">-</span><span class="github-stat-lbl">Forks</span></div>
-            <div class="github-stat-item"><span class="github-stat-val" id="github-issues">-</span><span class="github-stat-lbl">Issues</span></div>
-            <div class="github-stat-item"><span class="github-stat-val" id="github-updated">-</span><span class="github-stat-lbl">Atualização</span></div>
-          </div>
-          <span class="github-sync-status" id="github-sync-date">Aguardando resposta da API.</span>
+          <dl class="github-stats">
+            <div><dt>Stars</dt><dd id="github-stars">-</dd></div>
+            <div><dt>Forks</dt><dd id="github-forks">-</dd></div>
+            <div><dt>Issues</dt><dd id="github-issues">-</dd></div>
+            <div><dt>Atualização</dt><dd id="github-updated">-</dd></div>
+          </dl>
+          <p id="github-sync-date">Aguardando resposta da API.</p>
         </div>
       </aside>
     </section>
 
-    <section class="metrics section compact" aria-label="Indicadores da entrega final">
-      <article class="metric reveal"><strong data-count="6">0</strong><span>partes do desafio atendidas</span></article>
-      <article class="metric reveal"><strong data-count="8">0</strong><span>documentos de apoio</span></article>
-      <article class="metric reveal"><strong data-count="4">0</strong><span>projetos destacados</span></article>
-      <article class="metric reveal"><strong data-count="100">0</strong><span>% estático, sem backend sensível</span></article>
-    </section>
-
-    <section class="section two-column" id="sobre">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Sobre</p>
-        <h2>Plataforma centralizada para portfólio digital</h2>
+    <section class="section objective-band" aria-label="Objetivo atendido">
+      <div class="objective-card reveal">
+        <span>Objetivo da atividade</span>
+        <p>Realizar a implantação do PortfolioHUB como plataforma centralizada para portfólios digitais, aplicando gestão de usuários, segurança, compartilhamento e controle de acesso com Git e GitHub.</p>
       </div>
-      <div class="content-stack">
-        <p class="lead-card reveal">O projeto foi organizado como uma entrega acadêmica de implantação. A solução usa HTML, CSS e JavaScript nativos para facilitar publicação no GitHub Pages, reduzir dependências e tornar o processo de auditoria mais simples.</p>
-        <div class="feature-grid">
-          <article class="feature reveal"><span>01</span><h3>Implantação</h3><p>Plano de execução, ambiente GitHub, publicação estática e relatório final em PDF.</p></article>
-          <article class="feature reveal"><span>02</span><h3>Integração</h3><p>Uso da API pública do GitHub para exibir dados do repositório e reforçar a integração da plataforma.</p></article>
-          <article class="feature reveal"><span>03</span><h3>Segurança</h3><p>Políticas documentadas de acesso, proteção de branch, CSP, revisão de segredos e boas práticas de colaboração.</p></article>
-        </div>
+      <div class="objective-checks reveal" aria-label="Critérios atendidos">
+        <span>Projetos centralizados</span>
+        <span>GitHub configurado</span>
+        <span>IAM documentado</span>
+        <span>CSP aplicada</span>
       </div>
     </section>
 
     <section class="section" id="projetos">
       <div class="section-heading reveal">
-        <p class="eyebrow">Projetos</p>
-        <h2>Projetos acadêmicos e pessoais documentados</h2>
-        <p>Os cards abaixo representam os projetos inseridos no PortfolioHUB e conectados ao fluxo de portfólio no GitHub.</p>
+        <p class="eyebrow">Portfólio</p>
+        <h2>Projetos exibidos e gerenciáveis no hub</h2>
+        <p>Use busca e filtros para navegar pelos projetos cadastrados. A organização por categoria simula o fluxo de curadoria do portfólio e facilita avaliação, manutenção e compartilhamento.</p>
       </div>
 
-      <div class="filter-bar reveal" aria-label="Filtrar projetos">
-        <button class="filter-btn active" type="button" data-filter="todos">Todos</button>
-        <button class="filter-btn" type="button" data-filter="academico">Acadêmicos</button>
-        <button class="filter-btn" type="button" data-filter="pessoal">Pessoais</button>
+      <div class="project-toolbar reveal" aria-label="Ferramentas dos projetos">
+        <label class="search-field">
+          <span>Buscar projeto</span>
+          <input id="project-search" type="search" placeholder="Digite nome, tecnologia ou tema" autocomplete="off">
+        </label>
+        <div class="filter-bar" aria-label="Filtrar projetos">
+          <button class="filter-btn active" type="button" data-filter="todos">Todos</button>
+          <button class="filter-btn" type="button" data-filter="academico">Acadêmicos</button>
+          <button class="filter-btn" type="button" data-filter="pessoal">Pessoais</button>
+        </div>
       </div>
 
-      <div class="project-grid">
-        <article class="project-card reveal" data-project-type="academico">
-          <div class="card-topline"><span class="tag">Acadêmico</span><span class="card-code">Entrega final</span></div>
+      <div class="project-grid" id="project-grid">
+        <article class="project-card reveal featured" data-project-type="academico" data-search="portfoliohub academico html css javascript github pages seguranca portfolio">
+          <div class="card-topline"><span>Acadêmico</span><strong>Entrega final</strong></div>
           <h3>PortfolioHUB</h3>
-          <p>Projeto principal da atividade, com documentação de implantação, integração com GitHub, segurança e relatório de testes.</p>
+          <p>Projeto principal da implantação, reunindo site, documentação, relatório, slides, GitHub API e evidências de segurança.</p>
           <ul class="tech-list"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>GitHub Pages</li></ul>
           <a class="inline-link" href="projetos/academicos/portfoliohub/README.md">Ler documentação</a>
         </article>
 
-        <article class="project-card reveal" data-project-type="pessoal">
-          <div class="card-topline"><span class="tag">Pessoal</span><span class="card-code">Saúde</span></div>
+        <article class="project-card reveal" data-project-type="pessoal" data-search="asclepio saude flutter firebase mobile sintomas rotina localizacao">
+          <div class="card-topline"><span>Pessoal</span><strong>Saúde</strong></div>
           <h3>Asclépio</h3>
-          <p>Aplicativo de saúde com foco em rotina, sintomas, localização e acompanhamento de indicadores pessoais.</p>
+          <p>Aplicativo de saúde para rotina, sintomas, localização e acompanhamento de indicadores pessoais.</p>
           <ul class="tech-list"><li>Flutter</li><li>Firebase</li><li>Mobile</li></ul>
           <a class="inline-link" href="projetos/pessoais/asclepio/README.md">Ler README</a>
         </article>
 
-        <article class="project-card reveal" data-project-type="pessoal">
-          <div class="card-topline"><span class="tag">Pessoal</span><span class="card-code">Streaming</span></div>
+        <article class="project-card reveal" data-project-type="pessoal" data-search="amet streaming web ux tempo real video salas sincronizadas">
+          <div class="card-topline"><span>Pessoal</span><strong>Streaming</strong></div>
           <h3>AMET</h3>
           <p>Conceito de plataforma para assistir vídeos em salas sincronizadas, com foco em experiência compartilhada.</p>
           <ul class="tech-list"><li>Web</li><li>UX</li><li>Tempo real</li></ul>
           <a class="inline-link" href="projetos/pessoais/amet/README.md">Ler README</a>
         </article>
 
-        <article class="project-card reveal" data-project-type="pessoal">
-          <div class="card-topline"><span class="tag">Pessoal</span><span class="card-code">Android</span></div>
+        <article class="project-card reveal" data-project-type="pessoal" data-search="plantao android kotlin java escalas agenda operacional">
+          <div class="card-topline"><span>Pessoal</span><strong>Android</strong></div>
           <h3>Plantão</h3>
           <p>Aplicativo para consulta e organização de escalas, com foco em clareza de agenda e controle operacional.</p>
           <ul class="tech-list"><li>Android</li><li>Kotlin/Java</li><li>Mobile</li></ul>
           <a class="inline-link" href="projetos/pessoais/plantao/README.md">Ler README</a>
         </article>
       </div>
+
+      <p class="empty-state" id="empty-projects" hidden>Nenhum projeto encontrado com os filtros atuais.</p>
+    </section>
+
+    <section class="section two-column" id="acesso">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Gestão de usuários</p>
+        <h2>Matriz de acesso para colaboração segura</h2>
+        <p>Os papéis abaixo orientam como usuários interagem com o repositório, a documentação e a publicação do PortfolioHUB.</p>
+      </div>
+      <div class="access-table reveal" role="table" aria-label="Matriz IAM">
+        <div role="row" class="access-row header"><span>Papel</span><span>Permissão</span><span>Uso</span></div>
+        <div role="row" class="access-row"><span>Owner</span><span>Admin</span><span>Gerencia Pages, permissões e branch principal.</span></div>
+        <div role="row" class="access-row"><span>Maintainer</span><span>Write</span><span>Revisa Pull Requests e mantém documentação.</span></div>
+        <div role="row" class="access-row"><span>Collaborator</span><span>Branch/PR</span><span>Contribui sem alterar diretamente a main.</span></div>
+        <div role="row" class="access-row"><span>Avaliador</span><span>Read</span><span>Consulta site, relatório e evidências.</span></div>
+      </div>
     </section>
 
     <section class="section" id="github">
       <div class="section-heading reveal">
-        <p class="eyebrow">GitHub</p>
-        <h2>Configuração inicial e integração com o repositório</h2>
+        <p class="eyebrow">Git e GitHub</p>
+        <h2>Compartilhamento e controle de acesso configurados</h2>
       </div>
-      <div class="split-cards">
-        <article class="info-card reveal">
-          <h3>Ambiente dedicado</h3>
-          <p>O repositório <code>junior089/portfoliohub-entrega-intermediaria</code> foi utilizado como ambiente central da entrega. A estrutura separa página, assets, documentação, relatório, slides e projetos.</p>
-          <pre><code>gh repo clone junior089/portfoliohub-entrega-intermediaria
-cd portfoliohub-entrega-intermediaria
-git checkout -b entrega-final</code></pre>
+      <div class="workflow-grid">
+        <article class="workflow-card reveal">
+          <span>01</span>
+          <h3>Repositório dedicado</h3>
+          <p>Estrutura separada por site, assets, documentação, projetos, relatório e apresentação.</p>
         </article>
-        <article class="info-card reveal">
-          <h3>Integração no PortfolioHUB</h3>
-          <p>A seção inicial consome a GitHub REST API para buscar metadados do repositório, com fallback local para não quebrar a interface em caso de limite de requisições ou acesso offline.</p>
-          <pre><code>GET https://api.github.com/repos/junior089/portfoliohub-entrega-intermediaria</code></pre>
+        <article class="workflow-card reveal">
+          <span>02</span>
+          <h3>Fluxo por branch</h3>
+          <p>Alterações relevantes devem nascer em branch própria, passar por commits e chegar por Pull Request.</p>
         </article>
-      </div>
-    </section>
-
-    <section class="section" id="seguranca">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Segurança e IAM</p>
-        <h2>Políticas de segurança e controle de acesso</h2>
-        <p>As regras abaixo estão documentadas para aplicação no GitHub. O objetivo é reduzir risco de alteração indevida, vazamento de credenciais e execução de scripts não autorizados.</p>
-      </div>
-
-      <div class="security-grid reveal">
-        <article class="security-card">
-          <div class="security-badge">Acesso</div>
-          <h3>Matriz IAM</h3>
-          <ul class="security-bullet-list">
-            <li><strong>Owner:</strong> administra repositório, Pages e permissões.</li>
-            <li><strong>Collaborator:</strong> altera código por branch e Pull Request.</li>
-            <li><strong>Reader/Avaliador:</strong> acessa documentação e evidências.</li>
-          </ul>
+        <article class="workflow-card reveal">
+          <span>03</span>
+          <h3>Revisão antes do merge</h3>
+          <p>O template de PR reforça testes, links, documentação e ausência de segredos no código.</p>
         </article>
-        <article class="security-card">
-          <div class="security-badge">Git</div>
-          <h3>Proteção de branch</h3>
-          <ul class="security-bullet-list">
-            <li>Evitar push direto na <code>main</code>.</li>
-            <li>Usar Pull Request para revisão.</li>
-            <li>Bloquear force push e exclusão de branch protegida.</li>
-          </ul>
-        </article>
-        <article class="security-card">
-          <div class="security-badge">Web</div>
-          <h3>CSP e segredos</h3>
-          <ul class="security-bullet-list">
-            <li>Content Security Policy sem <code>unsafe-inline</code>.</li>
-            <li>Nenhum token, senha ou chave no código-fonte.</li>
-            <li>Uso de checklist para Dependabot e Secret Scanning.</li>
-          </ul>
+        <article class="workflow-card reveal">
+          <span>04</span>
+          <h3>Publicação estática</h3>
+          <p>GitHub Pages permite compartilhar o PortfolioHUB sem expor backend, banco de dados ou credenciais.</p>
         </article>
       </div>
     </section>
 
-    <section class="section" id="gemini">
+    <section class="section two-column security-section" id="seguranca">
       <div class="section-heading reveal">
-        <p class="eyebrow">Google Gemini</p>
-        <h2>Apoio de IA no Planejamento e Segurança</h2>
-        <p>O Google Gemini foi utilizado de forma ativa como consultor para planejar as etapas da implantação, formular as diretrizes de segurança no GitHub e orientar a estruturação do roteiro da entrega final.</p>
+        <p class="eyebrow">Segurança</p>
+        <h2>Controles aplicados e recomendados</h2>
+        <p>A entrega combina proteção no front-end, documentação de IAM e práticas de repositório para reduzir risco de alteração indevida ou vazamento de informações.</p>
       </div>
+      <div class="security-list reveal">
+        <article><span></span><div><h3>Content Security Policy</h3><p>Scripts e estilos limitados à própria origem, conexão externa restrita à API pública do GitHub.</p></div></article>
+        <article><span></span><div><h3>Sem credenciais no código</h3><p>O projeto não usa tokens, senhas, chaves de API ou dados sensíveis no front-end.</p></div></article>
+        <article><span></span><div><h3>Proteção de branch</h3><p>Recomendação para bloquear force push, exclusão da main e exigir Pull Request.</p></div></article>
+        <article><span></span><div><h3>Fallback da API</h3><p>A interface continua funcionando quando o limite público da GitHub API é atingido.</p></div></article>
+      </div>
+    </section>
 
-      <div class="split-cards reveal">
-        <article class="info-card">
-          <h3>Planejamento da Implantação</h3>
-          <p>Uso de prompts voltados à engenharia de software para definir o cronograma de entrega, a divisão de branches e o fluxo de deploy no GitHub Pages.</p>
-        </article>
-        <article class="info-card">
-          <h3>Políticas de Segurança</h3>
-          <p>Consultoria da IA para o estabelecimento de regras de Branch Protection no repositório GitHub e diretrizes de controle de acesso (IAM).</p>
-        </article>
+    <section class="section" id="entrega">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Validação</p>
+        <h2>Checklist da entrega</h2>
+        <p>Esta área resume os itens necessários para demonstrar que a atividade foi implantada e documentada.</p>
+      </div>
+      <div class="delivery-grid reveal">
+        <label><input type="checkbox" checked> Plataforma PortfolioHUB disponível em HTML, CSS e JS</label>
+        <label><input type="checkbox" checked> Projetos acadêmicos e pessoais centralizados</label>
+        <label><input type="checkbox" checked> GitHub API integrada com fallback local</label>
+        <label><input type="checkbox" checked> Gestão de usuários e matriz IAM documentadas</label>
+        <label><input type="checkbox" checked> Segurança, CSP e controle de branch registrados</label>
+        <label><input type="checkbox" checked> Relatório, slides, testes e roteiro incluídos</label>
+      </div>
+      <div class="document-links reveal" aria-label="Documentos da entrega">
+        <a href="docs/planejamento.md">Planejamento</a>
+        <a href="docs/controle-acesso.md">Controle de acesso</a>
+        <a href="docs/seguranca.md">Segurança</a>
+        <a href="docs/testes.md">Testes</a>
+        <a href="documentos/relatorio-final.html">Relatório HTML</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>PortfolioHUB - Carlos Alberto Junior - Entrega Final 2026</p>
-    <a href="#inicio">Voltar ao topo</a>
+    <p>PortfolioHUB · Carlos Alberto Junior · Entrega 2026</p>
+    <div>
+      <a href="SECURITY.md">Política de segurança</a>
+      <a href="#inicio">Voltar ao topo</a>
+    </div>
   </footer>
 
   <script src="assets/js/main.js"></script>

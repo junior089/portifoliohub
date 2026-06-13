@@ -1,16 +1,16 @@
-# Segurança
+# Seguranca
 
-## Princípios adotados
+## Principios adotados
 
-- Menor privilégio para permissões no GitHub.
-- Separação entre documentação, código e evidências.
-- Não exposição de credenciais.
-- Revisão de alterações por Pull Request.
-- Publicação estática sem backend e sem dados sensíveis.
+- Menor privilegio para permissoes no GitHub.
+- Separacao entre documentacao, codigo e evidencias.
+- Nao exposicao de credenciais.
+- Revisao de alteracoes por Pull Request.
+- Publicacao estatica sem backend e sem dados sensiveis.
 
 ## Content Security Policy
 
-A página principal usa CSP para limitar a origem de scripts, estilos, imagens e conexões:
+A pagina principal usa CSP para limitar a origem de scripts, estilos, imagens e conexoes:
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
@@ -18,10 +18,18 @@ A página principal usa CSP para limitar a origem de scripts, estilos, imagens e
 
 ## GitHub
 
-Recomendações para o repositório:
+Recomendacoes para o repositorio:
 
 - Branch `main` protegida.
-- Pull Request para alteração relevante.
+- Pull Request para alteracao relevante.
 - Bloqueio de force push.
-- Secret Scanning ativo, quando disponível.
-- Dependabot alerts ativo, quando aplicável.
+- Secret Scanning ativo, quando disponivel.
+- Dependabot alerts ativo, quando aplicavel.
+
+## Tokens e chaves
+
+- Nao inserir token do GitHub em `index.html`, CSS ou JavaScript publico.
+- Como o PortfolioHUB e estatico e roda no navegador, qualquer token colocado no front-end fica exposto para visitantes.
+- A integracao do painel usa apenas dados publicos da GitHub REST API.
+- Se algum token for compartilhado por engano, ele deve ser revogado imediatamente no GitHub.
+- Token so deve ser usado em um backend seguro, GitHub Action ou servico proxy que nao exponha o segredo ao navegador.
